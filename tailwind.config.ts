@@ -35,9 +35,9 @@ const config: Config = {
           soft: "#EEF2F7",
         },
         accent: {
-          DEFAULT: "#10B981",
-          soft: "#059669",
-          glow: "#34D399",
+          DEFAULT: "#26d07c",
+          soft: "#1db86a",
+          glow: "#4ae8a8",
           cyan: "#14B8A6",
           plum: "#22C55E",
         },
@@ -73,10 +73,10 @@ const config: Config = {
         "grid-fade":
           "linear-gradient(to bottom, transparent, rgba(248,250,252,1) 80%), radial-gradient(circle at 50% 0%, rgba(16,185,129,0.08), transparent 50%)",
         "accent-gradient":
-          "linear-gradient(135deg, #14B8A6 0%, #10B981 100%)",
+          "linear-gradient(135deg, #1db86a 0%, #26d07c 100%)",
       },
       boxShadow: {
-        glow: "0 18px 45px -24px rgba(16, 185, 129, 0.55)",
+        glow: "0 18px 45px -24px rgba(38, 208, 124, 0.45)",
         "glow-soft": "0 14px 30px -24px rgba(15, 23, 42, 0.35)",
         card: "0 18px 50px -36px rgba(15,23,42,0.35)",
       },

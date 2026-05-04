@@ -23,7 +23,7 @@ body {
 }
 
 ::selection {
-  background: rgba(16, 185, 129, 0.18);
+  background: rgba(38, 208, 124, 0.22);
   color: #0f172a;
 }
 
@@ -90,12 +90,12 @@ body {
     @apply card transition-all duration-500;
   }
   .card-glow:hover {
-    border-color: rgba(16, 185, 129, 0.25);
+    border-color: rgba(38, 208, 124, 0.3);
     box-shadow: 0 20px 55px -38px rgba(15, 23, 42, 0.45);
   }
 
   .text-gradient-accent {
-    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    background: linear-gradient(135deg, #4ae8a8 0%, #26d07c 55%, #1db86a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,7 +129,7 @@ body {
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(16, 185, 129, 0.35) 50%,
+      rgba(38, 208, 124, 0.4) 50%,
       transparent 100%
     );
     will-change: transform;
@@ -142,7 +142,7 @@ body {
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(16, 185, 129, 0.3) 50%,
+      rgba(38, 208, 124, 0.35) 50%,
       transparent 100%
     );
   }
@@ -212,10 +212,10 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 22px;
   height: 22px;
-  background: #10b981;
+  background: #26d07c;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 0 0 4px rgba(38, 208, 124, 0.15);
   transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 input[type="range"]::-webkit-slider-thumb:hover {
@@ -224,9 +224,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
 input[type="range"]::-moz-range-thumb {
   width: 22px;
   height: 22px;
-  background: #10b981;
+  background: #26d07c;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 0 0 4px rgba(38, 208, 124, 0.15);
 }

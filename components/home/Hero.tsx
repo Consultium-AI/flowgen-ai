@@ -34,7 +34,7 @@ export function Hero() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(circle at 50% 18%, rgba(16,185,129,0.20) 0%, rgba(16,185,129,0.07) 28%, transparent 52%), radial-gradient(circle at 18% 72%, rgba(34,197,94,0.14) 0%, transparent 34%), radial-gradient(circle at 82% 58%, rgba(20,184,166,0.14) 0%, transparent 36%), linear-gradient(180deg, #04110d 0%, #06130f 42%, #08080A 100%)",
+            "radial-gradient(circle at 50% 22%, rgba(38,208,124,0.28) 0%, rgba(38,208,124,0.08) 32%, transparent 55%), radial-gradient(circle at 18% 72%, rgba(38,208,124,0.1) 0%, transparent 38%), radial-gradient(circle at 82% 58%, rgba(20,184,166,0.12) 0%, transparent 40%), linear-gradient(180deg, #05110d 0%, #071a14 46%, #030806 100%)",
         }}
       >
         {/* Grid */}
@@ -55,20 +55,20 @@ export function Hero() {
           className="absolute inset-0 opacity-70"
           style={{
             backgroundImage:
-              "linear-gradient(115deg, transparent 0%, transparent 36%, rgba(52,211,153,0.10) 42%, transparent 52%, transparent 100%)",
+              "linear-gradient(115deg, transparent 0%, transparent 36%, rgba(38,208,124,0.12) 42%, transparent 52%, transparent 100%)",
           }}
         />
         <div
           aria-hidden
-          className="absolute left-1/2 top-28 h-[520px] w-[520px] -translate-x-1/2 rounded-full border border-emerald-300/10"
+          className="absolute left-1/2 top-28 h-[520px] w-[520px] -translate-x-1/2 rounded-full border border-accent/15"
           style={{
             boxShadow:
-              "0 0 80px rgba(16,185,129,0.16), inset 0 0 80px rgba(16,185,129,0.08)",
+              "0 0 90px rgba(38,208,124,0.2), inset 0 0 72px rgba(38,208,124,0.1)",
           }}
         />
         <div
           aria-hidden
-          className="absolute left-1/2 top-10 h-[760px] w-[760px] -translate-x-1/2 rounded-full border border-emerald-300/[0.06]"
+          className="absolute left-1/2 top-10 h-[760px] w-[760px] -translate-x-1/2 rounded-full border border-accent/[0.07]"
         />
 
         {/* Aurora blobs */}
@@ -77,7 +77,7 @@ export function Hero() {
           className="absolute -top-52 left-1/2 h-[82%] w-[130%] -translate-x-1/2"
           style={{
             background:
-              "radial-gradient(ellipse at 50% 45%, rgba(16,185,129,0.34) 0%, transparent 58%)",
+              "radial-gradient(ellipse at 50% 45%, rgba(38,208,124,0.38) 0%, transparent 58%)",
             filter: "blur(90px)",
           }}
         />
@@ -127,7 +127,7 @@ export function Hero() {
         >
           <motion.span
             variants={item}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.18em] text-emerald-300"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/90"
           >
             {HERO.eyebrow}
           </motion.span>
@@ -154,18 +154,26 @@ export function Hero() {
             variants={item}
             className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:gap-4"
           >
-            <MagneticButton href={HERO.primaryCta.href} variant="primary">
+            <MagneticButton
+              href={HERO.primaryCta.href}
+              variant="primary"
+              className="rounded-full !px-8"
+            >
               {HERO.primaryCta.label}
               <ArrowRight className="h-4 w-4" />
             </MagneticButton>
-            <MagneticButton href={HERO.secondaryCta.href} variant="secondary">
+            <MagneticButton
+              href={HERO.secondaryCta.href}
+              variant="secondary"
+              className="rounded-full !px-8"
+            >
               {HERO.secondaryCta.label}
             </MagneticButton>
           </motion.div>
 
           <motion.p
             variants={item}
-            className="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-emerald-300/70"
+            className="mt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-white/55"
           >
             {HERO.priceline}
           </motion.p>

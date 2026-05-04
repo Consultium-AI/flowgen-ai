@@ -37,13 +37,13 @@ export const FOOTER_LINKS = {
 };
 
 export const HERO = {
-  eyebrow: "AI Operations Dashboards",
+  eyebrow: "AI OPERATIONS DASHBOARDS",
   title: "AI-automatiseringen met \u00e9\u00e9n dashboard voor je hele workflow",
   subtitle:
     "Van leads en rapportages tot approvals, afspraken en follow-ups. Qozen AI bouwt AI-workflows die je team kan volgen, controleren en verbeteren.",
   primaryCta: { label: "Plan gratis workflow-scan", href: "/contact" },
   secondaryCta: { label: "Bekijk demo", href: "/#case-study" },
-  priceline: "Pilot vanaf \u20ac399/maand",
+  priceline: "PILOT VANAF \u20ac399/MAAND",
 };
 
 export const PROBLEMS = {

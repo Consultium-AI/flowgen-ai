@@ -1,21 +1,22 @@
-# Nova AI
+# Qozen AI
 
-Een moderne marketing-site template voor een AI automatiserings-bureau,
-gebouwd met Next.js 14, TypeScript, Tailwind CSS en Framer Motion.
+Marketing site voor **Qozen AI** (qozenai.nl): AI-operations dashboards en
+workflows, gebouwd met Next.js 14, TypeScript, Tailwind CSS en Framer Motion.
 
-> Alle namen, e-mailadressen en telefoonnummers zijn placeholders. Pas
-> deze aan in `lib/content.ts` voordat je de site live zet.
+> Merk, contact en copy staan in [`lib/content.ts`](lib/content.ts). Pas
+> telefoon en placeholders aan voor productie.
 
 ## Features
 
-- 4 pagina's: Home, Use Cases, Over ons, Contact (+ legal placeholders)
+- 4 pagina's: Home, Diensten / use cases, Over ons, Contact (+ legal)
 - Animaties: scroll-reveals, gestaggerde hero, animated SVG workflow,
   count-up counters, tab transitions, accordion FAQ, magnetische buttons,
   carousel testimonials, page transitions
 - Werkende ROI rekenmachine met live counter animaties
 - Contactformulier met Resend integratie (uitgeschakeld zonder env-config)
 - Mobile menu, sticky navbar met scroll-state
-- Volledig dark theme met lime accent
+- Donkergroene hero met mint-accent (`#26d07c`), grid en radar-gloed;
+  navbar sluit visueel aan op de hero
 
 ## Stack
 
