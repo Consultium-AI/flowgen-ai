@@ -86,3 +86,24 @@ lib/
 npm run build
 npm run start
 ```
+
+## Live zetten (qozenai.nl)
+
+Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op localhost alleen als de host een **Node-server** start na `next build`, niet als je puur statische bestanden uit `out/` serveert (tenzij je expres `output: 'export'` zou gebruiken — dat doet dit project niet).
+
+**Vercel (aanbevolen)**
+
+1. Nieuw project → importeer **deze GitHub-repo**, branch `main`.
+2. Laat **Framework Preset: Next.js** staan (`vercel.json` helpt Vercel dit te herkennen). Build commando: `npm run build`, install: `npm ci` of `npm install`.
+3. Zet **geen** “Output Directory” op `out` — de output is `.next`.
+4. **Domains**: koppel `qozenai.nl` (en `www` indien gewenst) volgens Vercel DNS.
+5. **Environment variables** in Vercel (Production): `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` — zie `.env.example` voor het contactformulier.
+
+**Eigen server / Docker**
+
+```bash
+docker build -t qozen-ai .
+docker run -p 3000:3000 --env-file .env.production qozen-ai
+```
+
+Zet je reverse proxy (Nginx/Caddy) op poort 3000 en het domein naar die proxy.
