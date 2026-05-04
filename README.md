@@ -104,15 +104,11 @@ Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op loca
 
 - Open dat project in het dashboard → **Settings** → **Git** → **Connect Git Repository** → kies **`Consultium-AI/flowgen-ai`**, branch **`main`**. Daarna deployt elke push automatisch; je hoeft **geen** tweede project met dezelfde naam aan te maken.
 
-**Automatisch deployen via GitHub Actions** (optioneel)
+**Automatisch deployen via GitHub Actions** (optioneel, handmatig)
 
-Na het **eenmalig** aanmaken van het Vercel-project: in GitHub → repo **Settings** → **Secrets and variables** → **Actions**, voeg toe:
+Alleen als je **geen** Vercel–Git-koppeling wilt gebruiken: voeg secrets toe en start **Actions** → **Vercel Production Deploy (manual)** → **Run workflow**. Normaal deployt **elke push naar `main`** via Vercel zelf (Settings → Git).
 
-- `VERCEL_TOKEN` — Vercel → Account Settings → Tokens  
-- `VERCEL_ORG_ID` en `VERCEL_PROJECT_ID` — Vercel-project → **Settings** → **General** (gebruik het project dat **daadwerkelijk** met deze repo is gekoppeld — bv. `qozenai` of het bestaande `flowgen-ai`).
-
-Elke push naar `main` start dan workflow `.github/workflows/vercel-production.yml`. Zonder deze secrets faalt die workflow bewust.
-
+Secrets (alleen voor deze workflow): `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`.
 **Eigen server / Docker**
 
 ```bash
