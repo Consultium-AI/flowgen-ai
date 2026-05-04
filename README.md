@@ -94,17 +94,22 @@ Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op loca
 **Vercel (aanbevolen)**
 
 1. Nieuw project → importeer **deze GitHub-repo**, branch `main`.
-2. Laat **Framework Preset: Next.js** staan (`vercel.json` helpt Vercel dit te herkennen). Build commando: `npm run build`, install: `npm ci` of `npm install`.
-3. Zet **geen** “Output Directory” op `out` — de output is `.next`.
-4. **Domains**: koppel `qozenai.nl` (en `www` indien gewenst) volgens Vercel DNS.
-5. **Environment variables** in Vercel (Production): `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` — zie `.env.example` voor het contactformulier.
+2. **Project Name** (niet hetzelfde als de GitHub-repo): gebruik een **unieke** naam in je team, bv. **`qozenai`** of **`qozen-ai-web`**. Als je ziet *"Project flowgen-ai already exists"*, verander dit veld — of sluit de repo aan op het **bestaande** project (zie hieronder).
+3. Laat **Framework Preset: Next.js** staan (`vercel.json` helpt Vercel dit te herkennen). Build commando: `npm run build`, install: `npm ci` of `npm install`.
+4. Zet **geen** “Output Directory” op `out` — de output is `.next`.
+5. **Domains**: koppel `qozenai.nl` (en `www` indien gewenst) volgens Vercel DNS.
+6. **Environment variables** in Vercel (Production): `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` — zie `.env.example` voor het contactformulier.
+
+**Al er een Vercel-project `flowgen-ai` bestaat**
+
+- Open dat project in het dashboard → **Settings** → **Git** → **Connect Git Repository** → kies **`Consultium-AI/flowgen-ai`**, branch **`main`**. Daarna deployt elke push automatisch; je hoeft **geen** tweede project met dezelfde naam aan te maken.
 
 **Automatisch deployen via GitHub Actions** (optioneel)
 
 Na het **eenmalig** aanmaken van het Vercel-project: in GitHub → repo **Settings** → **Secrets and variables** → **Actions**, voeg toe:
 
 - `VERCEL_TOKEN` — Vercel → Account Settings → Tokens  
-- `VERCEL_ORG_ID` en `VERCEL_PROJECT_ID` — Vercel-project → **Settings** → **General**
+- `VERCEL_ORG_ID` en `VERCEL_PROJECT_ID` — Vercel-project → **Settings** → **General** (gebruik het project dat **daadwerkelijk** met deze repo is gekoppeld — bv. `qozenai` of het bestaande `flowgen-ai`).
 
 Elke push naar `main` start dan workflow `.github/workflows/vercel-production.yml`. Zonder deze secrets faalt die workflow bewust.
 
