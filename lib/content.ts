@@ -2,8 +2,11 @@ export const SITE = {
   name: "Qozen AI",
   domain: "qozenai.nl",
   email: "info@qozenai.nl",
-  phone: "+31 6 12345678",
-  phoneHref: "tel:+31612345678",
+  phone: "010 360 31123",
+  phoneHref: "tel:+311036031123",
+  kvk: "96716606",
+  btw: "NL005227750B76",
+  address: ["Westerstraat 10", "3016 DH Rotterdam", "Nederland"] as const,
   cal: {
     strategy: "/contact",
     lead: "/contact",
@@ -211,7 +214,7 @@ export const DIENSTEN = {
 
 export const HOW_IT_WORKS = {
   eyebrow: "Werkwijze",
-  title: "Van handmatig proces naar werkend AI-dashboard",
+  title: "Zo ontstaat jouw AI-dashboard in 5 stappen",
   steps: [
     {
       id: "01",
@@ -361,41 +364,41 @@ export const FAQ = {
   title: "Veelgestelde vragen",
   items: [
     {
-      q: "Is dit hetzelfde als n8n, Make of Zapier?",
-      a: "Nee. Die tools zijn vaak technisch en vooral gericht op workflowbouw. Qozen AI bouwt de workflow voor je \u00e9n maakt hem zichtbaar in een dashboard dat je team begrijpt.",
+      q: "Wat is het verschil met tools als n8n, Make of Zapier?",
+      a: "Die platforms bieden bouwblokken voor automations, maar het resultaat blijft vaak technisch en onzichtbaar. Qozen AI levert een werkend dashboard waar je team dagelijks mee kan werken, zonder zelf workflows te hoeven configureren.",
     },
     {
-      q: "Verstuurt AI automatisch mails?",
-      a: "Alleen als je dat wilt. Standaard werken we met een approval inbox: AI maakt een concept, jouw team keurt goed.",
+      q: "Houden wij zelf controle over wat AI doet?",
+      a: "Absoluut. Standaard zetten we een approval inbox in: AI bereidt acties voor, maar niets wordt verzonden zonder goedkeuring van je team.",
     },
     {
-      q: "Kan dit met onze bestaande tools koppelen?",
-      a: "Soms wel. Simpele koppelingen kunnen vaak snel. Complexe CRM-, ATS-, WhatsApp- of API-integraties worden apart gescoord en geprijsd.",
+      q: "Werkt dit samen met onze huidige software?",
+      a: "In veel gevallen wel. Eenvoudige koppelingen regelen we snel. Voor complexere integraties met CRM, ATS, WhatsApp of externe API\u2019s maken we een apart voorstel.",
     },
     {
-      q: "Hoe snel kan een pilot live?",
-      a: "Een simpele pilot kan vaak binnen 1\u20132 weken live, nadat alle input en toegang is aangeleverd.",
+      q: "Hoe lang duurt het voordat we live zijn?",
+      a: "De meeste pilots zijn binnen 1 \u00e0 2 weken operationeel, zodra we alle benodigde input en toegang hebben ontvangen.",
     },
     {
-      q: "Wat als we extra workflows willen?",
-      a: "Extra workflows kunnen worden toegevoegd vanaf \u20ac199/maand, afhankelijk van complexiteit.",
+      q: "Kunnen we later extra processen toevoegen?",
+      a: "Zeker. Na de eerste workflow kun je uitbreiden met extra modules vanaf \u20ac199/maand, afhankelijk van de complexiteit.",
     },
     {
-      q: "Voor welke bedrijven is dit geschikt?",
-      a: "Vooral voor bedrijven die veel handmatige opvolging, leads, kandidaten, rapportages of terugkerende communicatie verwerken.",
+      q: "Welk type bedrijf heeft hier het meeste baat bij?",
+      a: "Bedrijven met terugkerende opvolgprocessen: denk aan leadbeheer, kandidaatopvolging, rapportages of klantcommunicatie die nu nog handmatig verloopt.",
     },
     {
-      q: "Is er een gratis demo?",
-      a: "Ja. We kunnen een korte demo geven en samen kijken of \u00e9\u00e9n workflow geschikt is voor een pilot.",
+      q: "Kan ik eerst vrijblijvend kennismaken?",
+      a: "Ja, plan een gratis workflow-scan. We bekijken samen \u00e9\u00e9n concreet proces en schatten in of een dashboard-pilot zinvol is.",
     },
   ],
 };
 
 export const BOTTOM_CTA = {
   title:
-    "Wil je \u00e9\u00e9n handmatig proces automatiseren zonder controle te verliezen?",
+    "Klaar om je eerste proces te automatiseren met volledig overzicht?",
   description:
-    "Plan een korte workflow-scan. We kijken samen welk proces het meeste tijd kost en of het geschikt is voor een eerste AI-dashboard pilot.",
+    "Boek een gratis workflow-scan en ontdek welk proces het snelst resultaat oplevert als AI-dashboard pilot.",
   primaryCta: { label: "Plan workflow-scan", href: "/contact" },
   secondaryCta: { label: "Bekijk demo", href: "/#case-study" },
 };
@@ -474,49 +477,49 @@ export const USE_CASES = {
   ],
   compare: {
     eyebrow: "Het verschil",
-    title: "Handmatig vs. AI Operations Dashboard",
+    title: "Zonder dashboard vs. met Qozen AI",
     manual: {
-      title: "Handmatig proces",
+      title: "Zonder dashboard",
       items: [
-        "Leads verspreid over mail, formulieren en berichten",
-        "Follow-ups handmatig bijhouden in Excel of Sheets",
-        "Geen overzicht welke mails zijn verstuurd",
-        "Workflows onzichtbaar in technische tools",
-        "Geen controle over wat AI verstuurt",
+        "Informatie verspreid over meerdere tools en inboxen",
+        "Opvolging bijhouden via spreadsheets of geheugen",
+        "Onduidelijk welke acties al zijn uitgevoerd",
+        "Automations draaien onzichtbaar op de achtergrond",
+        "Geen goedkeuringsproces voor AI-gegenereerde berichten",
       ],
     },
     ours: {
-      title: "Met Qozen AI",
+      title: "Met Qozen AI dashboard",
       items: [
-        "Alle leads centraal in \u00e9\u00e9n dashboard",
-        "Follow-ups automatisch klaargezet",
-        "AI-conceptmails met approval voor verzending",
-        "Workflows zichtbaar en beheerbaar",
-        "Volledige controle via approval inbox",
+        "Alles gecentraliseerd in \u00e9\u00e9n overzichtelijk dashboard",
+        "Opvolgmomenten automatisch ingepland en zichtbaar",
+        "AI-concepten controleerbaar via approval inbox",
+        "Elke workflow transparant en beheersbaar",
+        "Je team beslist, AI bereidt voor",
       ],
     },
   },
   finalCta: {
-    title: "Klaar om overzicht te cre\u00ebren?",
-    button: { label: "Plan een gratis workflow-scan", href: "/contact" },
+    title: "Benieuwd wat dit voor jouw bedrijf betekent?",
+    button: { label: "Boek een gratis workflow-scan", href: "/contact" },
   },
 };
 
 export const ABOUT = {
   hero: {
     eyebrow: "Over Qozen AI",
-    title: "Wie we zijn en wat we bouwen",
+    title: "Ons verhaal en onze aanpak",
   },
   mission: [
-    "Wij geloven dat automatisering pas waardevol is wanneer je team het ook daadwerkelijk kan volgen en beheren.",
-    "Veel bedrijven investeren in AI en automation, maar verliezen overzicht zodra processen onzichtbaar draaien. Welke lead is opgevolgd? Welke mail is verstuurd? Welke workflow is mislukt?",
-    "Qozen AI lost dit op door AI-workflows te koppelen aan overzichtelijke dashboards. Zo behoudt je team controle, overzicht en vertrouwen in de automatiseringen die voor hen werken.",
-    "We bouwen geen vage AI-beloften. We bouwen concrete dashboards waarin je ziet wat er gebeurt, wat aandacht nodig heeft en wat automatisch loopt.",
-    "Onze eerste demo is gebouwd vanuit de operationele behoefte van Consultium AI. Die ervaring gebruiken we nu om pilots te bouwen voor geselecteerde bedrijven.",
+    "Automatisering heeft alleen waarde als je team er dagelijks mee kan werken. Niet als het onzichtbaar op de achtergrond draait.",
+    "Te vaak zien we hetzelfde patroon: bedrijven zetten AI in, maar raken het overzicht kwijt. Leads verdwijnen tussen tools, mails worden gemist en niemand weet welke workflow nog actief is.",
+    "Daarom koppelt Qozen AI elke automatisering aan een helder dashboard. Je team ziet in \u00e9\u00e9n oogopslag wat er loopt, wat aandacht vraagt en waar actie nodig is.",
+    "Geen abstracte technologie-beloften, maar werkende systemen. Dashboards waarin elk proces zichtbaar, controleerbaar en schaalbaar is.",
+    "Onze aanpak is ontstaan vanuit de operationele praktijk van Consultium AI. Die hands-on ervaring zetten we nu in om pilots te draaien voor ambitieuze bedrijven.",
   ],
   team: {
     eyebrow: "Team",
-    title: "De visie achter Qozen AI",
+    title: "Het team achter Qozen AI",
     members: [
       {
         name: "Founder",
@@ -530,7 +533,7 @@ export const ABOUT = {
 
 export const CONTACT = {
   eyebrow: "Contact",
-  title: "Plan een workflow-scan",
+  title: "Neem de eerste stap",
   subtitle:
-    "Vertel ons welk proces je wilt automatiseren. We kijken samen of het geschikt is voor een eerste AI-dashboard pilot.",
+    "Beschrijf het proces dat je wilt stroomlijnen. Wij beoordelen of een AI-dashboard pilot de juiste oplossing is en nemen binnen 24 uur contact op.",
 };

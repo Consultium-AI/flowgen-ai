@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, Instagram, Linkedin, MapPin } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { FOOTER_LINKS, SITE } from "@/lib/content";
 
@@ -73,8 +73,21 @@ export function Footer() {
               markClassName="bg-black p-0.5 shadow-sm ring-white/25"
             />
             <p className="text-sm leading-relaxed text-muted">
-              AI Operations Dashboards die handmatige opvolging, goedkeuringen
-              en workflows overzichtelijk automatiseren.
+              Wij bouwen AI-dashboards waarmee je team grip houdt op leads,
+              opvolgingen en goedkeuringen. Alles op één plek.
+            </p>
+            <p className="text-xs leading-relaxed text-muted-soft">
+              <span className="inline-flex items-start gap-2">
+                <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-soft" aria-hidden />
+                <span>
+                  {[SITE.address[0], SITE.address[1], SITE.address[2]].join(
+                    " · ",
+                  )}
+                </span>
+              </span>
+            </p>
+            <p className="text-xs text-muted-soft">
+              KVK: {SITE.kvk} · BTW: {SITE.btw}
             </p>
             <div className="space-y-2 text-sm">
               <a
@@ -128,7 +141,8 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-soft">
-            © {new Date().getFullYear()} Qozen AI · Alle rechten voorbehouden
+            © {new Date().getFullYear()} Qozen AI · KVK {SITE.kvk} · BTW{" "}
+            {SITE.btw} · Alle rechten voorbehouden
           </p>
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-soft">
             Gebouwd met passie in Nederland
