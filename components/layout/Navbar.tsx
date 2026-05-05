@@ -130,17 +130,14 @@ export function Navbar() {
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: navHidden ? -96 : 0, opacity: navHidden ? 0 : 1 }}
       transition={{ duration: 0.6, ease: [0.21, 0.6, 0.36, 1] }}
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 flex justify-center transition-[padding] duration-500",
-        scrolled ? "px-4 pt-4 sm:px-6 sm:pt-6" : "px-0 pt-0",
-      )}
+      className="fixed inset-x-0 top-0 z-50 flex justify-center px-[50px] pt-4 sm:pt-6"
     >
       <motion.div
         className={cn(
-          "relative flex w-full max-w-none items-center justify-between transition-[background,border,box-shadow,border-radius,padding] duration-500",
+          "relative flex w-full items-center justify-between rounded-2xl border px-4 py-3 transition-[background,border,box-shadow] duration-500 sm:px-5 sm:py-3.5",
           scrolled
-            ? "mx-auto max-w-7xl rounded-2xl border border-border bg-white/94 px-4 py-3 shadow-[0_18px_45px_-34px_rgba(15,23,42,0.45)] backdrop-blur-xl sm:px-5 sm:py-3.5"
-            : "h-[4.25rem] rounded-none border-b border-white/10 bg-[#05110d]/95 px-5 backdrop-blur-md sm:px-8 lg:px-12",
+            ? "border-border bg-white/94 shadow-[0_18px_45px_-34px_rgba(15,23,42,0.45)] backdrop-blur-xl"
+            : "border-white/20 bg-slate-950/45 shadow-[0_18px_45px_-38px_rgba(0,0,0,0.7)] backdrop-blur-md",
         )}
       >
         <div className="flex items-center gap-2.5">
@@ -195,7 +192,7 @@ export function Navbar() {
             rel={
               SITE.cal.strategy.startsWith("http") ? "noopener noreferrer" : undefined
             }
-            className="group inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow-soft transition-all duration-300 hover:bg-accent-soft hover:shadow-glow"
+            className="group inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow-soft transition-all duration-300 hover:bg-accent-soft hover:shadow-glow"
           >
             Plan workflow-scan
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -303,7 +300,7 @@ export function Navbar() {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-white shadow-glow-soft"
+                    className="flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-glow-soft"
                   >
                     Plan workflow-scan
                     <ArrowRight className="h-4 w-4" />
