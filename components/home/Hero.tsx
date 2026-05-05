@@ -136,11 +136,13 @@ export function Hero() {
             variants={item}
             className="font-display display-tight text-display-xl font-medium text-ink text-balance"
           >
-            <span className="block whitespace-nowrap">AI-automatiseringen met</span>
-            <span className="block whitespace-nowrap">
-              <span className="inline-block pr-2 text-gradient-accent italic">&eacute;&eacute;n dashboard&nbsp;</span>
+            <span className="block md:whitespace-nowrap">AI-automatiseringen met</span>
+            <span className="block md:whitespace-nowrap">
+              <span className="inline text-gradient-accent italic md:inline-block md:pr-2">
+                &eacute;&eacute;n dashboard&nbsp;
+              </span>
             </span>
-            <span className="block whitespace-nowrap">voor je hele workflow</span>
+            <span className="block md:whitespace-nowrap">voor je hele workflow</span>
           </motion.h1>
 
           <motion.p
