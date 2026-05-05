@@ -100,6 +100,19 @@ Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op loca
 5. **Domains**: koppel `qozenai.nl` (en `www` indien gewenst) volgens Vercel DNS.
 6. **Environment variables** in Vercel (Production): `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` — zie `.env.example` voor het contactformulier.
 
+**Vercel CLI (lokaal)**
+
+```bash
+npm install
+npx vercel login                    # eenmalig
+npm run vercel:link                 # koppel map → Vercel-project (b.v. qozenai)
+npm run vercel:pull                 # optioneel: trek Production env naar .env.local
+npm run vercel:deploy               # deploy naar Production (--prod)
+npm run vercel:preview              # preview-deploy (andere branch/URL)
+```
+
+Zonder login: zet `VERCEL_TOKEN` (Account → Tokens) en gebruik `vercel deploy --prod --token=...` na `vercel link`.
+
 **Al er een Vercel-project `flowgen-ai` bestaat**
 
 - Open dat project in het dashboard → **Settings** → **Git** → **Connect Git Repository** → kies **`Consultium-AI/flowgen-ai`**, branch **`main`**. Daarna deployt elke push automatisch; je hoeft **geen** tweede project met dezelfde naam aan te maken.
@@ -109,6 +122,7 @@ Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op loca
 Alleen als je **geen** Vercel–Git-koppeling wilt gebruiken: voeg secrets toe en start **Actions** → **Vercel Production Deploy (manual)** → **Run workflow**. Normaal deployt **elke push naar `main`** via Vercel zelf (Settings → Git).
 
 Secrets (alleen voor deze workflow): `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`.
+
 **Eigen server / Docker**
 
 ```bash
