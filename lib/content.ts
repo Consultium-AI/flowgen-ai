@@ -528,9 +528,9 @@ export const CONTACT = {
 
 export const BOOKING = {
   eyebrow: "Workflow-scan",
-  title: "Plan een gesprek van 30 minuten",
+  title: "Plan je gratis workflow-scan",
   subtitle:
-    "Je kiest een starttijd op elk heel uur; het gesprek zelf duurt een halfuur. Na bevestiging ontvang je een meetinglink per e-mail.",
+    "In deze call pakken we een proces dat nu veel tijd kost en laten we zien hoe een AI Operations Dashboard je daar grip en rust bij geeft. Je gaat weg met een concreet beeld van een eerste pilot en waar het snelste winst zit. Geen voorbereiding nodig: we starten vanuit jouw echte werkvloer.",
   sideCard: {
     title: "Wat bespreken we?",
     paragraphs: [

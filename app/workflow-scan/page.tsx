@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Workflow-scan boeken",
   description:
-    "Plan een gratis workflow-scan van 30 minuten. Starttijden op elk heel uur.",
+    "Gratis workflow-scan van 30 minuten: ontdek welk proces als eerste in een AI-dashboard past. Ma–vr, 09:00–17:00, slots om het halfuur.",
 };
 
 function calWorkflowScanLink(): string {

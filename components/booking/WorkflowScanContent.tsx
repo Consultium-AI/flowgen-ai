@@ -51,7 +51,7 @@ export function WorkflowScanContent({ calLink }: Props) {
               </li>
               <li className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2 backdrop-blur-sm">
                 <CalendarClock className="h-4 w-4 text-accent" aria-hidden />
-                Ma–vr · start elk uur · 08:00–18:00
+                Ma–vr · om het halfuur · 09:00–17:00
               </li>
             </ul>
           </ScrollReveal>
@@ -111,7 +111,7 @@ export function WorkflowScanContent({ calLink }: Props) {
                     Plan een afspraak via het contactformulier
                   </p>
                   <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">
-                    We plannen graag een gesprek van 30 minuten voor je in, met starttijden op elk heel uur.
+                    We plannen graag een gesprek van 30 minuten; maandag t/m vrijdag tussen 09:00 en 17:00, met tijdvakken om het halfuur.
                   </p>
                   <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                     <Link
