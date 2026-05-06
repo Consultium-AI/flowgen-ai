@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, Instagram, Linkedin, MapPin } from "lucide-react";
+import { Mail, Phone, Instagram, Linkedin } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { FOOTER_LINKS, SITE } from "@/lib/content";
 
@@ -76,46 +76,6 @@ export function Footer() {
               Wij bouwen AI-dashboards waarmee je team grip houdt op leads,
               opvolgingen en goedkeuringen. Alles op één plek.
             </p>
-            <div className="rounded-2xl border border-white/[0.12] bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-4 shadow-[0_12px_40px_-28px_rgba(0,0,0,0.65)] backdrop-blur-sm">
-              <p className="mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">
-                Vestiging
-              </p>
-              <div className="flex gap-3">
-                <div
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-accent/10 text-accent shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-                  aria-hidden
-                >
-                  <MapPin className="h-4 w-4" strokeWidth={2} />
-                </div>
-                <address className="min-w-0 not-italic">
-                  <p className="text-sm font-semibold leading-snug text-white">
-                    {SITE.address[0]}
-                  </p>
-                  <p className="mt-0.5 text-sm leading-snug text-white/75">
-                    {SITE.address[1]}
-                  </p>
-                  <p className="mt-0.5 text-sm text-white/55">{SITE.address[2]}</p>
-                </address>
-              </div>
-              <dl className="mt-4 grid gap-3 border-t border-white/10 pt-4 sm:grid-cols-2 sm:gap-4">
-                <div>
-                  <dt className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-muted-soft">
-                    KVK-nummer
-                  </dt>
-                  <dd className="mt-1 text-sm font-medium tabular-nums tracking-wide text-white/90">
-                    {SITE.kvk}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-muted-soft">
-                    BTW-id
-                  </dt>
-                  <dd className="mt-1 break-all text-sm font-medium tabular-nums tracking-wide text-white/90">
-                    {SITE.btw}
-                  </dd>
-                </div>
-              </dl>
-            </div>
             <div className="space-y-2 text-sm">
               <a
                 href={SITE.phoneHref}
@@ -167,8 +127,9 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
-          <p className="max-w-md text-center font-mono text-[11px] uppercase leading-relaxed tracking-[0.18em] text-muted-soft sm:text-left">
-            © {new Date().getFullYear()} Qozen AI · Alle rechten voorbehouden
+          <p className="max-w-lg text-center font-mono text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted-soft sm:text-left sm:text-[11px] sm:tracking-[0.18em]">
+            © {new Date().getFullYear()} Qozen AI · KVK {SITE.kvk} · BTW{" "}
+            {SITE.btw} · Alle rechten voorbehouden
           </p>
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-soft">
             Gebouwd met passie in Nederland
