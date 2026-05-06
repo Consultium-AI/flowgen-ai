@@ -186,17 +186,25 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <a
-            href={SITE.cal.strategy}
-            target={SITE.cal.strategy.startsWith("http") ? "_blank" : undefined}
-            rel={
-              SITE.cal.strategy.startsWith("http") ? "noopener noreferrer" : undefined
-            }
-            className="group inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow-soft transition-all duration-300 hover:bg-accent-soft hover:shadow-glow"
-          >
-            Plan workflow-scan
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </a>
+          {SITE.cal.strategy.startsWith("http") ? (
+            <a
+              href={SITE.cal.strategy}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow-soft transition-all duration-300 hover:bg-accent-soft hover:shadow-glow"
+            >
+              Plan workflow-scan
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </a>
+          ) : (
+            <Link
+              href={SITE.cal.strategy}
+              className="group inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow-soft transition-all duration-300 hover:bg-accent-soft hover:shadow-glow"
+            >
+              Plan workflow-scan
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          )}
         </div>
 
         <button
@@ -290,21 +298,26 @@ export function Navbar() {
                   );
                 })}
                 <div className="mt-2 border-t border-border pt-3">
-                  <a
-                    href={SITE.cal.strategy}
-                    target={
-                      SITE.cal.strategy.startsWith("http") ? "_blank" : undefined
-                    }
-                    rel={
-                      SITE.cal.strategy.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-glow-soft"
-                  >
-                    Plan workflow-scan
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
+                  {SITE.cal.strategy.startsWith("http") ? (
+                    <a
+                      href={SITE.cal.strategy}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-glow-soft"
+                    >
+                      Plan workflow-scan
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <Link
+                      href={SITE.cal.strategy}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-glow-soft"
+                    >
+                      Plan workflow-scan
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  )}
                 </div>
               </nav>
             </div>

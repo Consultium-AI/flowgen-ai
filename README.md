@@ -1,4 +1,4 @@
-# Qozen AI — website (qozenai.nl)
+# Qozen AI · website (qozenai.nl)
 
 Publieke marketing site voor **Qozen AI**: AI operations dashboards, workflows en
 contact. Stack: Next.js 14 (App Router), TypeScript, Tailwind CSS, Framer Motion.
@@ -88,7 +88,7 @@ npm run start
 
 ## Live zetten (qozenai.nl)
 
-Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op localhost alleen als de host een **Node-server** start na `next build`, niet als je puur statische bestanden uit `out/` serveert (tenzij je expres `output: 'export'` zou gebruiken — dat doet dit project niet).
+Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op localhost alleen als de host een **Node-server** start na `next build`, niet als je puur statische bestanden uit `out/` serveert (tenzij je expres `output: 'export'` zou gebruiken; dat doet dit project niet).
 
 **Vercel (aanbevolen)**
 
@@ -97,9 +97,9 @@ Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op loca
    Bestaat die naam al in je team, gebruik een variant (b.v. `qozen-ai-web`) of
    koppel **Git** aan een bestaand project in plaats van opnieuw te importeren.
 3. Laat **Framework Preset: Next.js** staan (`vercel.json` helpt Vercel dit te herkennen). Build commando: `npm run build`, install: `npm ci` of `npm install`.
-4. Zet **geen** “Output Directory” op `out` — de output is `.next`.
+4. Zet **geen** “Output Directory” op `out`; de output is `.next`.
 5. **Domains**: koppel `qozenai.nl` (en `www` indien gewenst) volgens Vercel DNS.
-6. **Environment variables** in Vercel (Production): `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` — zie `.env.example` voor het contactformulier.
+6. **Environment variables** in Vercel (Production): `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM`. Zie `.env.example` voor het contactformulier.
 
 **Vercel CLI (lokaal)**
 

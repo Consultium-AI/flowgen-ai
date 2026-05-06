@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export const alt =
-  "Qozen AI — AI Operations Dashboards voor leads, goedkeuringen en workflows";
+  "Qozen AI · AI Operations Dashboards voor leads, goedkeuringen en workflows";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -78,7 +78,7 @@ export default function OpenGraphImage() {
             zIndex: 1,
           }}
         >
-          Eén dashboard voor leads, goedkeuringen en workflows — grip op je
+          Eén dashboard voor leads, goedkeuringen en workflows: grip op je
           AI-automatisering
         </div>
         <div

@@ -26,9 +26,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 const siteTitle =
-  "Qozen AI — AI Operations Dashboards voor leads, goedkeuringen en workflows";
+  "Qozen AI · AI Operations Dashboards voor leads, goedkeuringen en workflows";
 const siteDescription =
-  "Qozen AI bouwt heldere AI-workflows met één overzichtelijk dashboard. Volg leads, keur AI-berichten goed en bewaak opvolging — met volledige controle voor je team.";
+  "Qozen AI bouwt heldere AI-workflows met één overzichtelijk dashboard. Volg leads, keur AI-berichten goed en bewaak opvolging, met volledige controle voor je team.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://qozenai.nl"),

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AboutContent } from "@/components/over-ons/AboutContent";
 
 export const metadata: Metadata = {
-  title: "Over ons — Qozen AI",
+  title: "Over ons",
   description:
     "Qozen AI bouwt AI Operations Dashboards die handmatige opvolging, goedkeuringen en workflows overzichtelijk automatiseren.",
 };

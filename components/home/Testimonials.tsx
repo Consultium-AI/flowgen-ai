@@ -83,7 +83,7 @@ export function Testimonials() {
                 >
                   <img
                     src={current.image}
-                    alt={`${current.label} — ${current.placeholder}`}
+                    alt={`${current.label}: ${current.placeholder}`}
                     className="block w-full"
                     draggable={false}
                   />

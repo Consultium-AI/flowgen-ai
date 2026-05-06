@@ -37,7 +37,7 @@ export function ServicesContent() {
                 via een centraal dashboard.
               </p>
               <div className="mt-10">
-                <MagneticButton href="/contact" variant="primary">
+                <MagneticButton href="/workflow-scan" variant="primary">
                   Plan een gratis workflow-scan
                   <ArrowRight className="h-4 w-4" />
                 </MagneticButton>
@@ -132,7 +132,7 @@ export function ServicesContent() {
                 resultaat oplevert als AI-dashboard pilot.
               </p>
               <div className="relative mt-8 flex justify-center">
-                <MagneticButton href="/contact" variant="primary">
+                <MagneticButton href="/workflow-scan" variant="primary">
                   Plan workflow-scan
                   <ArrowRight className="h-4 w-4" />
                 </MagneticButton>

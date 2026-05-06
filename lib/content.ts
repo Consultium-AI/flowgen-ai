@@ -8,7 +8,7 @@ export const SITE = {
   btw: "NL005227750B76",
   address: ["Westerstraat 10", "3016 DH Rotterdam", "Nederland"] as const,
   cal: {
-    strategy: "/contact",
+    strategy: "/workflow-scan",
     lead: "/contact",
   },
   socials: {
@@ -30,7 +30,7 @@ export const FOOTER_LINKS = {
     { label: "Contact", href: "/contact" },
   ],
   start: [
-    { label: "Plan workflow-scan", href: "/contact" },
+    { label: "Plan workflow-scan", href: "/workflow-scan" },
     { label: "Neem contact op", href: "/contact" },
   ],
   legal: [
@@ -44,7 +44,7 @@ export const HERO = {
   title: "AI-automatiseringen met \u00e9\u00e9n dashboard voor je hele workflow",
   subtitle:
     "Van leads en rapportages tot approvals, afspraken en follow-ups. Qozen AI bouwt AI-workflows die je team kan volgen, controleren en verbeteren.",
-  primaryCta: { label: "Plan gratis workflow-scan", href: "/contact" },
+  primaryCta: { label: "Plan gratis workflow-scan", href: "/workflow-scan" },
   secondaryCta: { label: "Bekijk demo", href: "/#case-study" },
   priceline: "PILOT VANAF \u20ac399/MAAND",
 };
@@ -222,7 +222,7 @@ export const HOW_IT_WORKS = {
       heading: "Breng je herhalende proces in kaart",
       description:
         "We brengen \u00e9\u00e9n herhalend proces in kaart, zoals leadopvolging, kandidaatopvolging, rapportage of demo-aanvragen.",
-      cta: { label: "Plan een workflow-scan", href: "/contact" },
+      cta: { label: "Plan een workflow-scan", href: "/workflow-scan" },
     },
     {
       id: "02",
@@ -399,7 +399,7 @@ export const BOTTOM_CTA = {
     "Klaar om je eerste proces te automatiseren met volledig overzicht?",
   description:
     "Boek een gratis workflow-scan en ontdek welk proces het snelst resultaat oplevert als AI-dashboard pilot.",
-  primaryCta: { label: "Plan workflow-scan", href: "/contact" },
+  primaryCta: { label: "Plan workflow-scan", href: "/workflow-scan" },
   secondaryCta: { label: "Bekijk demo", href: "/#case-study" },
 };
 
@@ -444,7 +444,7 @@ export const USE_CASES = {
         "Opvolgmail klaargezet met AI-concept",
         "Interviewstatus en pipeline overzichtelijk in dashboard",
       ],
-      cta: { label: "Plan een workflow-scan", href: "/contact" },
+      cta: { label: "Plan een workflow-scan", href: "/workflow-scan" },
     },
     {
       id: "marketing",
@@ -458,7 +458,7 @@ export const USE_CASES = {
         "AI-weekrapport automatisch gegenereerd",
         "Exporteerbare rapportage voor klanten",
       ],
-      cta: { label: "Plan een workflow-scan", href: "/contact" },
+      cta: { label: "Plan een workflow-scan", href: "/workflow-scan" },
     },
     {
       id: "dienstverlening",
@@ -472,7 +472,7 @@ export const USE_CASES = {
         "Follow-ups automatisch gepland",
         "Demo-afspraken gekoppeld aan pipeline",
       ],
-      cta: { label: "Plan een workflow-scan", href: "/contact" },
+      cta: { label: "Plan een workflow-scan", href: "/workflow-scan" },
     },
   ],
   compare: {
@@ -501,7 +501,7 @@ export const USE_CASES = {
   },
   finalCta: {
     title: "Benieuwd wat dit voor jouw bedrijf betekent?",
-    button: { label: "Boek een gratis workflow-scan", href: "/contact" },
+    button: { label: "Boek een gratis workflow-scan", href: "/workflow-scan" },
   },
 };
 
@@ -524,4 +524,26 @@ export const CONTACT = {
   title: "Neem de eerste stap",
   subtitle:
     "Beschrijf het proces dat je wilt stroomlijnen. Wij beoordelen of een AI-dashboard pilot de juiste oplossing is en nemen binnen 24 uur contact op.",
+};
+
+export const BOOKING = {
+  eyebrow: "Workflow-scan",
+  title: "Plan een gesprek van 30 minuten",
+  subtitle:
+    "Je kiest een starttijd op elk heel uur; het gesprek zelf duurt een halfuur. Na bevestiging ontvang je een meetinglink per e-mail.",
+  sideCard: {
+    title: "Wat bespreken we?",
+    paragraphs: [
+      "We duiken kort in één herhalend proces dat nu veel tijd kost, bijvoorbeeld leadopvolging, kandidaatopvolging, rapportages of demo-aanvragen. Eén concreet voorbeeld is genoeg; je hoeft je volledige stack nog niet uitgeschreven te hebben.",
+      "Samen brengen we in kaart waar het nu vastloopt, welke tools je gebruikt en waar een AI Operations Dashboard het verschil maakt: je team ziet wat er gebeurt, AI bereidt acties voor en jij bewaakt kwaliteit via een approval inbox. Geen automatisering die onzichtbaar op de achtergrond draait.",
+    ],
+    outcomes: [
+      "Of een pilot bij jouw situatie past",
+      "Welke workflow als eerste het snelste resultaat kan geven",
+      "Welke vervolgstap logisch is qua scope en tijdlijn",
+    ],
+    closing:
+      "De workflow-scan is vrijblijvend: aan het einde weet je of een dashboard-project voor jou zinvol is. Geen verplicht verkoopgesprek, wél heldere vervolgstappen als het past.",
+    contactHint: "Vragen vóór je boekt? Neem contact op",
+  },
 };

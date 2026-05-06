@@ -16,6 +16,7 @@
     "vercel:deploy": "vercel deploy --prod"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",

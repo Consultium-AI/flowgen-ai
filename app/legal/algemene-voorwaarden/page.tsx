@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Algemene voorwaarden — Qozen AI",
+  title: "Algemene voorwaarden",
   description:
     "Algemene voorwaarden van Qozen AI. Lees onze leveringsvoorwaarden, aansprakelijkheid en afspraken.",
 };

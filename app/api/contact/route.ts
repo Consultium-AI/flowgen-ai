@@ -46,20 +46,33 @@ export async function POST(request: Request) {
     }
 
     const resend = new Resend(apiKey);
-    const { error } = await resend.emails.send({
+
+    const { error: notifyError } = await resend.emails.send({
       from,
       to,
       replyTo: email,
       subject: `Nieuw contactformulier bericht van ${name}`,
-      html: render({ name, email, company, message }),
+      html: renderNotifyTeam({ name, email, company, message }),
     });
 
-    if (error) {
-      console.error("[contact] resend error", error);
+    if (notifyError) {
+      console.error("[contact] notify team error", notifyError);
       return NextResponse.json(
         { error: "Versturen mislukt, probeer het later opnieuw." },
         { status: 500 },
       );
+    }
+
+    const { error: autoReplyError } = await resend.emails.send({
+      from,
+      to: email,
+      replyTo: to,
+      subject: "Bedankt voor je bericht · Qozen AI",
+      html: renderAutoReplyToVisitor(name),
+    });
+
+    if (autoReplyError) {
+      console.error("[contact] visitor auto-reply error", autoReplyError);
     }
 
     return NextResponse.json({ ok: true });
@@ -69,17 +82,73 @@ export async function POST(request: Request) {
   }
 }
 
-function render(p: { name: string; email: string; company: string; message: string }) {
+function renderNotifyTeam(p: {
+  name: string;
+  email: string;
+  company: string;
+  message: string;
+}) {
   return `
     <div style="font-family: ui-sans-serif, system-ui, -apple-system; max-width: 560px; margin: 0 auto; padding: 24px;">
       <h2 style="margin: 0 0 16px;">Nieuw contactformulier bericht</h2>
       <table style="width: 100%; border-collapse: collapse;">
         <tr><td style="padding: 8px 0; color: #555;">Naam</td><td>${escape(p.name)}</td></tr>
         <tr><td style="padding: 8px 0; color: #555;">Email</td><td>${escape(p.email)}</td></tr>
-        <tr><td style="padding: 8px 0; color: #555;">Bedrijf</td><td>${escape(p.company || "—")}</td></tr>
+        <tr><td style="padding: 8px 0; color: #555;">Bedrijf</td><td>${escape(p.company || "-")}</td></tr>
       </table>
       <p style="margin-top: 16px; white-space: pre-wrap;">${escape(p.message)}</p>
     </div>`;
+}
+
+function visitorFirstName(fullName: string): string {
+  const t = fullName.trim();
+  return t.split(/\s+/)[0] ?? t;
+}
+
+function renderAutoReplyToVisitor(fullName: string): string {
+  const dear = escape(visitorFirstName(fullName));
+  return `<!doctype html>
+<html>
+  <body style="margin:0; padding:0; background:#f7f7f7; font-family:Arial, Helvetica, sans-serif; color:#111827;">
+    <div style="max-width:600px; margin:0 auto; background:#ffffff; padding:32px;">
+      <h1 style="font-size:22px; line-height:1.3; margin:0 0 16px; color:#111827;">
+        Bedankt voor je bericht
+      </h1>
+
+      <p style="font-size:15px; line-height:1.6; margin:0 0 16px;">
+        Beste ${dear},
+      </p>
+
+      <p style="font-size:15px; line-height:1.6; margin:0 0 16px;">
+        Bedankt voor je bericht via <strong>QozenAI</strong>.
+      </p>
+
+      <p style="font-size:15px; line-height:1.6; margin:0 0 16px;">
+        We hebben je aanvraag goed ontvangen. Ons team bekijkt je bericht en neemt binnen
+        <strong>24 uur</strong> contact met je op.
+      </p>
+
+      <p style="font-size:15px; line-height:1.6; margin:0 0 16px;">
+        Bij QozenAI helpen we bedrijven om handmatige processen, zoals leadopvolging,
+        approvals, rapportages en workflows, overzichtelijk te automatiseren in één
+        AI-dashboard. We kijken graag met je mee welk proces bij jou het meeste tijd kost
+        en of dit geschikt is voor een eerste workflow-scan.
+      </p>
+
+      <p style="font-size:15px; line-height:1.6; margin:0 0 24px;">
+        Heb je in de tussentijd aanvullende informatie? Dan kun je gewoon op deze e-mail reageren.
+      </p>
+
+      <p style="font-size:15px; line-height:1.6; margin:0;">
+        Met vriendelijke groet,<br />
+        <strong>Team QozenAI</strong><br />
+        <a href="mailto:info@qozenai.nl" style="color:#111827; text-decoration:underline;">
+          info@qozenai.nl
+        </a>
+      </p>
+    </div>
+  </body>
+</html>`;
 }
 
 function escape(s: string) {

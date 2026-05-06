@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy beleid — Qozen AI",
+  title: "Privacy beleid",
   description:
     "Privacyverklaring van Qozen AI. Lees hoe wij omgaan met jouw persoonsgegevens.",
 };

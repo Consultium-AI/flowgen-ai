@@ -67,10 +67,9 @@ export function ContactContent() {
               <ContactCard
                 icon={<Calendar className="h-5 w-5" />}
                 title="Plan een gesprek"
-                description="Boek direct een 30-minuten workflow-scan."
-                action="cal.com / qozen-ai"
-                href={SITE.cal.strategy}
-                external
+                description="Boek een workflow-scan van 30 minuten; starttijden elk uur."
+                action="30 min"
+                href="/workflow-scan"
                 featured
               />
               <ContactCard
