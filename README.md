@@ -1,10 +1,9 @@
-# Qozen AI
+# Qozen AI — website (qozenai.nl)
 
-Marketing site voor **Qozen AI** (qozenai.nl): AI-operations dashboards en
-workflows, gebouwd met Next.js 14, TypeScript, Tailwind CSS en Framer Motion.
+Publieke marketing site voor **Qozen AI**: AI operations dashboards, workflows en
+contact. Stack: Next.js 14 (App Router), TypeScript, Tailwind CSS, Framer Motion.
 
-> Merk, contact en copy staan in [`lib/content.ts`](lib/content.ts). Pas
-> telefoon en placeholders aan voor productie.
+> Copy en contact staan in [`lib/content.ts`](lib/content.ts).
 
 ## Features
 
@@ -93,8 +92,10 @@ Dit is een **Next.js-app** (SSR + API routes). Je site gedraagt zich als op loca
 
 **Vercel (aanbevolen)**
 
-1. Nieuw project → importeer **deze GitHub-repo**, branch `main`.
-2. **Project Name** (niet hetzelfde als de GitHub-repo): gebruik een **unieke** naam in je team, bv. **`qozenai`** of **`qozen-ai-web`**. Als je ziet *"Project flowgen-ai already exists"*, verander dit veld — of sluit de repo aan op het **bestaande** project (zie hieronder).
+1. Nieuw project → importeer **jouw GitHub-repository**, branch `main`.
+2. **Project Name** in Vercel: bij voorkeur **`qozenai`**, passend bij je domein.
+   Bestaat die naam al in je team, gebruik een variant (b.v. `qozen-ai-web`) of
+   koppel **Git** aan een bestaand project in plaats van opnieuw te importeren.
 3. Laat **Framework Preset: Next.js** staan (`vercel.json` helpt Vercel dit te herkennen). Build commando: `npm run build`, install: `npm ci` of `npm install`.
 4. Zet **geen** “Output Directory” op `out` — de output is `.next`.
 5. **Domains**: koppel `qozenai.nl` (en `www` indien gewenst) volgens Vercel DNS.
@@ -113,9 +114,10 @@ npm run vercel:preview              # preview-deploy (andere branch/URL)
 
 Zonder login: zet `VERCEL_TOKEN` (Account → Tokens) en gebruik `vercel deploy --prod --token=...` na `vercel link`.
 
-**Al er een Vercel-project `flowgen-ai` bestaat**
+**Bestaand Vercel-project**
 
-- Open dat project in het dashboard → **Settings** → **Git** → **Connect Git Repository** → kies **`Consultium-AI/flowgen-ai`**, branch **`main`**. Daarna deployt elke push automatisch; je hoeft **geen** tweede project met dezelfde naam aan te maken.
+- Open het project → **Settings** → **Git** → **Connect Git Repository** → kies
+  je repository, branch **`main`**. Daarna deployt elke push automatisch.
 
 **Automatisch deployen via GitHub Actions** (optioneel, handmatig)
 

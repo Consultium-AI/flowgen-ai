@@ -25,21 +25,51 @@ const jetbrains = JetBrains_Mono({
   weight: ["300", "400", "500"],
 });
 
+const siteTitle =
+  "Qozen AI — AI Operations Dashboards voor leads, goedkeuringen en workflows";
+const siteDescription =
+  "Qozen AI bouwt heldere AI-workflows met één overzichtelijk dashboard. Volg leads, keur AI-berichten goed en bewaak opvolging — met volledige controle voor je team.";
+
 export const metadata: Metadata = {
-  title: "Qozen AI — AI Operations Dashboards voor leads, approvals en workflows",
-  description:
-    "Qozen AI bouwt AI-workflows met een overzichtelijk dashboard voor leads, approvals, follow-ups en rapportages. Automatiseer je opvolging en behoud volledige controle.",
   metadataBase: new URL("https://qozenai.nl"),
+  title: {
+    default: siteTitle,
+    template: "%s | Qozen AI",
+  },
+  description: siteDescription,
+  keywords: [
+    "Qozen AI",
+    "AI dashboard",
+    "workflow automatisering",
+    "lead opvolging",
+    "approval inbox",
+    "AI operations",
+    "Nederland",
+  ],
+  authors: [{ name: "Qozen AI", url: "https://qozenai.nl" }],
+  creator: "Qozen AI",
+  publisher: "Qozen AI",
+  formatDetection: { email: false, address: false, telephone: false },
   icons: {
     icon: "/images/Qlogo.png",
     apple: "/images/Qlogo.png",
   },
   openGraph: {
-    title: "Qozen AI — AI Operations Dashboards voor leads, approvals en workflows",
-    description:
-      "Qozen AI bouwt AI-workflows met een overzichtelijk dashboard voor leads, approvals, follow-ups en rapportages. Automatiseer je opvolging en behoud volledige controle.",
+    title: siteTitle,
+    description: siteDescription,
+    url: "https://qozenai.nl",
+    siteName: "Qozen AI",
     locale: "nl_NL",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
