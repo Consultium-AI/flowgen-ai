@@ -517,18 +517,6 @@ export const ABOUT = {
     "Geen abstracte technologie-beloften, maar werkende systemen. Dashboards waarin elk proces zichtbaar, controleerbaar en schaalbaar is.",
     "Onze aanpak is ontstaan vanuit de operationele praktijk van Consultium AI. Die hands-on ervaring zetten we nu in om pilots te draaien voor ambitieuze bedrijven.",
   ],
-  team: {
-    eyebrow: "Team",
-    title: "Het team achter Qozen AI",
-    members: [
-      {
-        name: "Founder",
-        role: "Oprichter",
-        bio: "Bouwt AI Operations Dashboards die handmatige opvolging, goedkeuringen en workflows overzichtelijk automatiseren. Gedreven door de overtuiging dat AI pas werkt als je team het kan volgen.",
-        initials: "F",
-      },
-    ],
-  },
 };
 
 export const CONTACT = {
