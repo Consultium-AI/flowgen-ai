@@ -32,9 +32,9 @@ export function ServicesContent() {
                 AI Operations Dashboards op maat.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-                Van lead tracking tot workflow monitoring. Kies een pakket dat past
-                bij jouw fase en behoud volledige controle via overzichtelijke
-                dashboards.
+                Of het nu gaat om leadopvolging, rapportage of goedkeuringen. Kies
+                het pakket dat bij jouw groeifase past en houd grip op elke stap
+                via een centraal dashboard.
               </p>
               <div className="mt-10">
                 <MagneticButton href="/contact" variant="primary">
@@ -85,7 +85,7 @@ export function ServicesContent() {
             <div className="max-w-3xl">
               <span className="eyebrow">{WORKFLOW.eyebrow}</span>
               <h2 className="heading-section mt-5 text-balance">
-                Van handmatig proces naar werkend AI-dashboard.
+                Zo transformeren we jouw workflow in een dashboard.
               </h2>
             </div>
           </ScrollReveal>
@@ -125,11 +125,11 @@ export function ServicesContent() {
                 className="pointer-events-none absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/15 blur-3xl"
               />
               <h2 className="relative heading-section text-balance">
-                Klaar om overzicht te cre&euml;ren?
+                Benieuwd wat een dashboard voor jou kan betekenen?
               </h2>
               <p className="relative mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-                Plan een korte workflow-scan. We kijken samen welk proces het meeste
-                tijd kost en of het geschikt is voor een eerste AI-dashboard pilot.
+                Boek een gratis workflow-scan en ontdek welk proces het snelst
+                resultaat oplevert als AI-dashboard pilot.
               </p>
               <div className="relative mt-8 flex justify-center">
                 <MagneticButton href="/contact" variant="primary">

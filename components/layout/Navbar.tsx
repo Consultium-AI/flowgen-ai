@@ -130,7 +130,7 @@ export function Navbar() {
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: navHidden ? -96 : 0, opacity: navHidden ? 0 : 1 }}
       transition={{ duration: 0.6, ease: [0.21, 0.6, 0.36, 1] }}
-      className="fixed inset-x-0 top-0 z-50 flex justify-center px-[50px] pt-4 sm:pt-6"
+      className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-4 sm:pt-6"
     >
       <motion.div
         className={cn(
