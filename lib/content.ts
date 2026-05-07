@@ -352,7 +352,7 @@ export const SECURITY = {
     "Geen automatische verzending zonder approval, tenzij afgesproken",
     "Activiteitenlog per workflow",
     "Duidelijke rechten en instellingen",
-    "API keys niet beveiligd",
+    "API keys beveiligd",
     "Geen gedeelde wachtwoorden",
     "Geen risky scraping in de standaardpakketten",
     "Externe toolkosten en integraties transparant afgesproken",
