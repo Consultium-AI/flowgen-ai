@@ -94,7 +94,7 @@ export function Footer() {
             </div>
             <div className="flex gap-2">
               <a
-                href={`https://wa.me/${SITE.phone.replace(/\D/g, "")}`}
+                href={SITE.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"

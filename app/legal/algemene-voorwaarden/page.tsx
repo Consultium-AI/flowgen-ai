@@ -383,8 +383,8 @@ export default function TermsPage() {
             </li>
             <li>
               Telefoon:{" "}
-              <a className="text-accent underline" href="tel:+311036031123">
-                010 360 31123
+              <a className="text-accent underline" href="tel:+31103603123">
+                010 360 3123
               </a>
             </li>
           </ul>

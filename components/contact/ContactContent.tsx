@@ -77,7 +77,7 @@ export function ContactContent() {
                 title="WhatsApp"
                 description="Snel contact via WhatsApp gedurende kantooruren."
                 action="Stuur bericht"
-                href={`https://wa.me/${SITE.phone.replace(/\D/g, "")}`}
+                href={SITE.whatsappHref}
                 external
               />
             </div>
