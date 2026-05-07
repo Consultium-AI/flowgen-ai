@@ -35,14 +35,14 @@ export default function HomePage() {
     <>
       {/* 1. Hero */}
       <Hero />
-      {/* 2. Probleem */}
-      <Features />
-      {/* 3. Oplossing */}
-      <Solution />
-      {/* 4. Case study / Dashboard demo */}
-      <Testimonials />
-      {/* 5. Voor wie */}
+      {/* 2. Voor wie */}
       <Industries />
+      {/* 3. Probleem */}
+      <Features />
+      {/* 4. Oplossing */}
+      <Solution />
+      {/* 5. Case study / Dashboard demo */}
+      <Testimonials />
       {/* 6. Diensten / modules */}
       <DienstenList />
       {/* 7. Hoe het werkt */}
