@@ -137,24 +137,37 @@ export const TARGET_AUDIENCES = {
       icon: "Users",
       description:
         "Kandidaten, klanten, follow-ups en interviews overzichtelijk beheren vanuit \u00e9\u00e9n dashboard.",
+      demo: { href: "/demo-recruitment", label: "Bekijk demo" },
     },
     {
       name: "Marketing- en socialmediabureaus",
       icon: "Megaphone",
       description:
         "Contentprestaties, rapportages, campagne-overzichten en klantupdates centraliseren.",
+      demo: {
+        href: "/workflow-scan?van=marketing-social",
+        label: "Bekijk demo",
+      },
     },
     {
       name: "Trainings- en onderwijsorganisaties",
       icon: "GraduationCap",
       description:
         "Aanvragen, inschrijvingen, demo\u2019s, deelnemerscommunicatie en opvolging structureren.",
+      demo: {
+        href: "/workflow-scan?van=onderwijs-training",
+        label: "Bekijk demo",
+      },
     },
     {
       name: "Dienstverlenende bedrijven",
       icon: "Briefcase",
       description:
         "Leads, offertes, opvolgmails en afspraken automatisch laten bijhouden.",
+      demo: {
+        href: "/workflow-scan?van=dienstverlening",
+        label: "Bekijk demo",
+      },
     },
   ],
 };

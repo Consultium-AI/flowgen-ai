@@ -7,8 +7,10 @@ import {
   Megaphone,
   GraduationCap,
   Briefcase,
+  ArrowRight,
   type LucideIcon,
 } from "lucide-react";
+import { MagneticButton } from "@/components/ui/MagneticButton";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBackground } from "@/components/ui/SectionBackground";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -101,6 +103,12 @@ export function Industries() {
                   <p className="text-base leading-relaxed text-muted sm:text-lg">
                     {item.description}
                   </p>
+                  <div className="mt-8">
+                    <MagneticButton href={item.demo.href}>
+                      {item.demo.label}
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </MagneticButton>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
