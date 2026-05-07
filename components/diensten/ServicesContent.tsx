@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { PricingSetup } from "@/components/ui/PricingSetup";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBackground } from "@/components/ui/SectionBackground";
 import { SERVICES, WORKFLOW } from "@/lib/content";
@@ -185,7 +186,9 @@ function ServiceCard({
           {service.description}
         </p>
 
-        <div className="mt-7 flex items-baseline gap-1">
+        <PricingSetup setup={service.setup} featured={service.featured} />
+
+        <div className="mt-6 flex items-baseline gap-1">
           <span
             className={cn(
               "font-display display-tight text-4xl font-medium sm:text-5xl",

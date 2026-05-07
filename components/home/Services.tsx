@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBackground } from "@/components/ui/SectionBackground";
+import { PricingSetup } from "@/components/ui/PricingSetup";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PRICING } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -55,15 +56,7 @@ export function Services() {
                   {service.description}
                 </p>
 
-                {/* Setup cost */}
-                <div className="mt-6">
-                  <span className="text-xs font-medium uppercase tracking-wider text-muted-soft">
-                    Setup
-                  </span>
-                  <div className="mt-1 font-display text-lg font-medium text-ink">
-                    {service.setup}
-                  </div>
-                </div>
+                <PricingSetup setup={service.setup} featured={service.featured} />
 
                 {/* Monthly price */}
                 <div className="mt-4 flex items-baseline gap-1">
