@@ -267,7 +267,7 @@ export const PRICING = {
     {
       name: "Pilot",
       description: "Voor eerste workflow of kleine bedrijven",
-      setup: "\u20ac0",
+      setup: "\u20ac750",
       price: "\u20ac399",
       cadence: "/ maand",
       cta: { label: "Workflow-scan voor Pilot", href: "/workflow-scan?van=pilot" },
@@ -282,7 +282,7 @@ export const PRICING = {
         "Basic support",
         "Maandelijkse kleine optimalisatie",
       ],
-      featured: true,
+      featured: false,
     },
     {
       name: "Growth",
@@ -300,7 +300,7 @@ export const PRICING = {
         "Prioriteit bij support",
         "Maandelijkse optimalisatie",
       ],
-      featured: false,
+      featured: true,
     },
     {
       name: "Custom Operations",
