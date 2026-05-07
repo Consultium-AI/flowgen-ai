@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, Instagram, Linkedin } from "lucide-react";
+import { Mail, MessageCircle, Phone, Linkedin } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { FOOTER_LINKS, SITE } from "@/lib/content";
 
@@ -94,13 +94,13 @@ export function Footer() {
             </div>
             <div className="flex gap-2">
               <a
-                href={SITE.socials.instagram}
+                href={`https://wa.me/${SITE.phone.replace(/\D/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
+                aria-label="WhatsApp"
                 className="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-white/70 transition-colors hover:border-accent/50 hover:text-accent"
               >
-                <Instagram className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" />
               </a>
               <a
                 href={SITE.socials.linkedin}

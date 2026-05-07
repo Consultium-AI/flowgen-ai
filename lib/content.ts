@@ -12,8 +12,7 @@ export const SITE = {
     lead: "/contact",
   },
   socials: {
-    instagram: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/company/qozen-ai",
   },
 };
 
