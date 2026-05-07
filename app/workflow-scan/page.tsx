@@ -18,6 +18,16 @@ function calWorkflowScanLink(): string {
   );
 }
 
-export default function WorkflowScanPage() {
-  return <WorkflowScanContent calLink={calWorkflowScanLink()} />;
+export default function WorkflowScanPage({
+  searchParams,
+}: {
+  searchParams: Record<string, string | string[] | undefined>;
+}) {
+  const van = searchParams.van;
+  return (
+    <WorkflowScanContent
+      calLink={calWorkflowScanLink()}
+      contextVan={van}
+    />
+  );
 }

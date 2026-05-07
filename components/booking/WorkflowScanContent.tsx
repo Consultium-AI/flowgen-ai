@@ -5,14 +5,17 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBackground } from "@/components/ui/SectionBackground";
 import { BOOKING } from "@/lib/content";
 import { calWorkflowScanFallbackUrl } from "@/lib/cal-booking";
+import { workflowScanContextNote } from "@/lib/workflow-scan-context";
 
 type Props = {
   calLink: string;
+  contextVan?: string | string[];
 };
 
-export function WorkflowScanContent({ calLink }: Props) {
+export function WorkflowScanContent({ calLink, contextVan }: Props) {
   const trimmed = calLink.trim();
   const fallbackBookingUrl = calWorkflowScanFallbackUrl(trimmed);
+  const contextNote = workflowScanContextNote(contextVan);
 
   return (
     <>
@@ -104,9 +107,28 @@ export function WorkflowScanContent({ calLink }: Props) {
 
             <ScrollReveal delay={0.08}>
               {trimmed ? (
-                <CalBookingEmbed calLink={trimmed} />
+                <div>
+                  {contextNote ? (
+                    <p
+                      className="mb-4 rounded-xl border border-accent/30 bg-accent/[0.08] px-4 py-3 text-sm font-medium leading-relaxed text-ink"
+                      role="status"
+                    >
+                      {contextNote}
+                    </p>
+                  ) : null}
+                  <CalBookingEmbed calLink={trimmed} />
+                </div>
               ) : (
-                <div className="rounded-2xl border border-border bg-white p-10 text-center shadow-card sm:p-12">
+                <div>
+                  {contextNote ? (
+                    <p
+                      className="mb-4 rounded-xl border border-accent/30 bg-accent/[0.08] px-4 py-3 text-sm font-medium leading-relaxed text-ink"
+                      role="status"
+                    >
+                      {contextNote}
+                    </p>
+                  ) : null}
+                  <div className="rounded-2xl border border-border bg-white p-10 text-center shadow-card sm:p-12">
                   <p className="text-base font-medium text-ink">
                     Plan een afspraak via het contactformulier
                   </p>
@@ -131,6 +153,7 @@ export function WorkflowScanContent({ calLink }: Props) {
                       </a>
                     ) : null}
                   </div>
+                </div>
                 </div>
               )}
             </ScrollReveal>

@@ -222,7 +222,7 @@ export const HOW_IT_WORKS = {
       heading: "Breng je herhalende proces in kaart",
       description:
         "We brengen \u00e9\u00e9n herhalend proces in kaart, zoals leadopvolging, kandidaatopvolging, rapportage of demo-aanvragen.",
-      cta: { label: "Plan een workflow-scan", href: "/workflow-scan" },
+      cta: { label: "Boek workflow-scan", href: "/workflow-scan?van=intro" },
     },
     {
       id: "02",
@@ -230,7 +230,7 @@ export const HOW_IT_WORKS = {
       heading: "Bouw een eerste versie van je dashboard",
       description:
         "We bouwen een eerste versie van je dashboard met de belangrijkste statussen, AI-concepten en acties.",
-      cta: { label: "Bekijk onze oplossingen", href: "/diensten" },
+      cta: { label: "MVP via workflow-scan", href: "/workflow-scan?van=mvp" },
     },
     {
       id: "03",
@@ -238,7 +238,7 @@ export const HOW_IT_WORKS = {
       heading: "Je team behoudt controle",
       description:
         "AI bereidt acties voor, maar je team behoudt controle via goedkeuringen. Geen automatische verzending zonder jouw akkoord.",
-      cta: { label: "Meer over approval inbox", href: "/diensten" },
+      cta: { label: "Approvals via workflow-scan", href: "/workflow-scan?van=approvals" },
     },
     {
       id: "04",
@@ -246,7 +246,7 @@ export const HOW_IT_WORKS = {
       heading: "Draai de workflow in de praktijk",
       description:
         "De workflow draait in de praktijk. We meten wat werkt, wat tijd bespaart en wat beter kan.",
-      cta: { label: "Start een pilot", href: "/contact" },
+      cta: { label: "Pilot via workflow-scan", href: "/workflow-scan?van=live" },
     },
     {
       id: "05",
@@ -254,7 +254,7 @@ export const HOW_IT_WORKS = {
       heading: "Voeg extra modules toe",
       description:
         "Na de eerste workflow kunnen extra modules worden toegevoegd vanaf \u20ac199/maand.",
-      cta: { label: "Bespreek uitbreiding", href: "/contact" },
+      cta: { label: "Opschalen via workflow-scan", href: "/workflow-scan?van=opschalen" },
     },
   ],
 };
@@ -270,7 +270,7 @@ export const PRICING = {
       setup: "\u20ac750",
       price: "\u20ac399",
       cadence: "/ maand",
-      cta: { label: "Start pilot", href: "/contact" },
+      cta: { label: "Workflow-scan voor Pilot", href: "/workflow-scan?van=pilot" },
       features: [
         "1 dashboard",
         "1 workflow",
@@ -290,7 +290,7 @@ export const PRICING = {
       setup: "\u20ac1.500",
       price: "\u20ac599",
       cadence: "/ maand",
-      cta: { label: "Plan demo", href: "/contact" },
+      cta: { label: "Workflow-scan voor Growth", href: "/workflow-scan?van=growth" },
       features: [
         "Alles uit Pilot",
         "2 workflows",
@@ -308,7 +308,7 @@ export const PRICING = {
       setup: "Vanaf \u20ac2.500",
       price: "Vanaf \u20ac899",
       cadence: "/ maand",
-      cta: { label: "Bespreek maatwerk", href: "/contact" },
+      cta: { label: "Workflow-scan voor maatwerk", href: "/workflow-scan?van=maatwerk" },
       features: [
         "Meerdere workflows",
         "Custom dashboard",
@@ -352,7 +352,7 @@ export const SECURITY = {
     "Geen automatische verzending zonder approval, tenzij afgesproken",
     "Activiteitenlog per workflow",
     "Duidelijke rechten en instellingen",
-    "API keys niet zichtbaar in de frontend",
+    "API keys niet beveiligd",
     "Geen gedeelde wachtwoorden",
     "Geen risky scraping in de standaardpakketten",
     "Externe toolkosten en integraties transparant afgesproken",
