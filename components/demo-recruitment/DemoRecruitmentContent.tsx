@@ -171,7 +171,7 @@ function DemoHero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/90"
           >
             <Sparkles className="h-3 w-3 text-accent-glow" />
-            Demo · AI Recruitment Ops
+            Demo AI Recruitment Ops
           </motion.span>
 
           <motion.h1
@@ -193,8 +193,8 @@ function DemoHero() {
             variants={heroItem}
             className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
           >
-            Inbox, screening, goedkeuringen en pipeline in één plek, zonder
-            tool-hop.
+            Inbox screening goedkeuringen en pipeline in één plek zonder
+            toolhop
           </motion.p>
 
           <motion.div
@@ -229,7 +229,7 @@ function DemoHero() {
           <BrowserFrame
             url="qozen.ai/recruitment-ops/overzicht"
             src={SCREENS.overzichtMain}
-            alt="Qozen AI Recruitment Ops dashboard - Overzicht"
+            alt="Qozen AI Recruitment Ops dashboard overzicht"
             tone="floating"
           />
         </motion.div>
@@ -306,26 +306,26 @@ function OverzichtSection() {
     <ModuleSection
       id="overzicht"
       icon={LayoutDashboard}
-      eyebrow="Module 01 · Overzicht"
+      eyebrow="Module 01 Overzicht"
       title="Dagelijkse briefing en KPI's in één oogopslag"
-      lead="Zie wat AI vannacht deed en waar je team vandaag moet bijsturen."
+      lead="Zie wat AI vannacht deed en waar je team vandaag moet bijsturen"
       chips={[
-        { icon: BellRing, label: "AI-briefing" },
+        { icon: BellRing, label: "AI briefing" },
         { icon: TrendingUp, label: "Live KPI's" },
-        { icon: ListChecks, label: "Bron-mix" },
+        { icon: ListChecks, label: "Bron mix" },
       ]}
       screenshots={[
         {
           src: SCREENS.overzichtMain,
           url: "qozen.ai/overzicht",
-          alt: "Overzicht dashboard met briefing, KPI's en grafieken",
-          label: "Briefing & KPI's",
+          alt: "Overzicht dashboard met briefing KPI's en grafieken",
+          label: "Briefing en KPI's",
         },
         {
           src: SCREENS.overzichtApprovals,
           url: "qozen.ai/overzicht / approvals",
           alt: "Wacht op goedkeuring inbox en activity feed",
-          label: "Approvals & activity",
+          label: "Approvals en activity",
           aspectRatio: "16 / 7",
           focus: "50% 30%",
         },
@@ -351,26 +351,26 @@ function KandidatenSection() {
     <ModuleSection
       id="kandidaten"
       icon={Users}
-      eyebrow="Module 02 · Kandidaten"
-      title="Centrale kandidaten-inbox met AI-screening"
-      lead="Importeer, laat matchen en samenvatten, voordat je een CV opent."
+      eyebrow="Module 02 Kandidaten"
+      title="Centrale kandidaten inbox met AI screening"
+      lead="Importeer laat matchen en samenvatten voordat je een CV opent"
       chips={[
-        { icon: Filter, label: "Bronnen & filters" },
+        { icon: Filter, label: "Bronnen en filters" },
         { icon: Brain, label: "Match 0 tot 100%" },
-        { icon: Sparkles, label: "AI-samenvatting" },
+        { icon: Sparkles, label: "AI samenvatting" },
       ]}
       screenshots={[
         {
           src: SCREENS.kandidatenSanne,
           url: "qozen.ai/kandidaten",
           alt: "Kandidatenlijst met Sanne de Vries detail-paneel",
-          label: "Sanne · 94% match",
+          label: "Sanne 94% match",
         },
         {
           src: SCREENS.kandidatenScreening,
           url: "qozen.ai/kandidaten / AI screening",
           alt: "AI screening overview en bespaarde tijd",
-          label: "AI-screening week",
+          label: "AI screening week",
         },
       ]}
     />
@@ -386,20 +386,20 @@ function GoedkeuringenSection() {
     <ModuleSection
       id="goedkeuringen"
       icon={ShieldCheck}
-      eyebrow="Module 03 · Goedkeuringen"
-      title="Mens in the loop: niets verstuurd zonder jouw OK"
-      lead="AI bereidt outreach en updates voor; jij keurt met uitleg per draft."
+      eyebrow="Module 03 Goedkeuringen"
+      title="Niets verstuurd zonder jouw OK met mens in the loop"
+      lead="AI bereidt outreach en updates voor en jij keurt met uitleg per draft"
       chips={[
-        { icon: PenLine, label: "Drafts + confidence" },
+        { icon: PenLine, label: "Drafts met confidence" },
         { icon: MessageSquareText, label: "Waarom dit bericht" },
-        { icon: BadgeCheck, label: "Bulk-goedkeuren" },
+        { icon: BadgeCheck, label: "Bulk goedkeuren" },
       ]}
       screenshots={[
         {
           src: SCREENS.goedkeuringen,
           url: "qozen.ai/goedkeuringen",
-          alt: "Goedkeuringen inbox met outreach-draft voor Sanne de Vries",
-          label: "Outreach draft (94%)",
+          alt: "Goedkeuringen inbox met outreach draft voor Sanne de Vries",
+          label: "Outreach draft 94%",
         },
       ]}
     />
@@ -415,9 +415,9 @@ function PipelineSection() {
     <ModuleSection
       id="pipeline"
       icon={GitBranch}
-      eyebrow="Module 04 · Pipeline"
+      eyebrow="Module 04 Pipeline"
       title="Kanban die meedenkt over conversie en vertraging"
-      lead="Sleep kandidaten door fases; AI signaleert knelpunten vroeg."
+      lead="Sleep kandidaten door fases en AI signaleert knelpunten vroeg"
       chips={[
         { icon: Target, label: "Match per kaart" },
         { icon: TrendingUp, label: "Benchmarks" },
@@ -428,13 +428,13 @@ function PipelineSection() {
           src: SCREENS.pipeline,
           url: "qozen.ai/pipeline",
           alt: "Recruitment pipeline kanban met 5 fases",
-          label: "Kanban-fases",
+          label: "Kanban fases",
         },
         {
           src: SCREENS.pipelineFull,
           url: "qozen.ai/pipeline / observaties",
-          alt: "Pipeline met AI-observaties onderaan",
-          label: "AI-observaties",
+          alt: "Pipeline met AI observaties onderaan",
+          label: "AI observaties",
         },
       ]}
     />
@@ -450,20 +450,20 @@ function AgendaSection() {
     <ModuleSection
       id="agenda"
       icon={Calendar}
-      eyebrow="Module 05 · Agenda"
+      eyebrow="Module 05 Agenda"
       title="Weekoverzicht voor intakes en klantmomenten"
-      lead="Alle afspraken en voorstellen op één tijdlijn, koppelbaar aan je stack."
+      lead="Alle afspraken en voorstellen op één tijdlijn koppelbaar aan je stack"
       chips={[
-        { icon: Calendar, label: "Week & dag" },
-        { icon: Sparkles, label: "AI slot-voorstellen" },
+        { icon: Calendar, label: "Week en dag" },
+        { icon: Sparkles, label: "AI slot voorstellen" },
         { icon: Clock, label: "Deadlines" },
       ]}
       screenshots={[
         {
           src: SCREENS.agenda,
           url: "qozen.ai/agenda",
-          alt: "Agenda met week-overzicht en AI plant voor je paneel",
-          label: "Agenda · week 19",
+          alt: "Agenda met weekoverzicht en AI plant voor je paneel",
+          label: "Agenda week 19",
         },
       ]}
     />
@@ -479,20 +479,20 @@ function WorkflowsSection() {
     <ModuleSection
       id="workflows"
       icon={WorkflowIcon}
-      eyebrow="Module 06 · Workflows"
-      title="No-code flows: trigger, AI, actie"
-      lead="Bouw automatiseringen visueel en zie runs, slagingspercentage en tijdwinst."
+      eyebrow="Module 06 Workflows"
+      title="Bouw flows met trigger AI en actie zonder code"
+      lead="Bouw visueel en volg runs met slagingspercentage en tijdwinst"
       chips={[
-        { icon: Zap, label: "Runs & stats" },
+        { icon: Zap, label: "Runs en stats" },
         { icon: ListChecks, label: "Trigger en actie" },
-        { icon: Brain, label: "AI-stappen" },
+        { icon: Brain, label: "AI stappen" },
       ]}
       screenshots={[
         {
           src: SCREENS.workflows,
           url: "qozen.ai/workflows",
-          alt: "Workflows pagina met 6 actieve workflows en stap-overzicht",
-          label: "Workflows-overzicht",
+          alt: "Workflows pagina met zes actieve workflows en stap overzicht",
+          label: "Workflows overzicht",
         },
       ]}
     />
@@ -508,9 +508,9 @@ function InstellingenSection() {
     <ModuleSection
       id="instellingen"
       icon={Settings}
-      eyebrow="Module 07 · Instellingen"
-      title="Tone-of-voice en goedkeurdrempels op maat"
-      lead="Jouw merk, jouw grenzen: sliders, verboden woorden en per-type regels."
+      eyebrow="Module 07 Instellingen"
+      title="Tone of voice en goedkeurdrempels op maat"
+      lead="Sliders verboden woorden en regels per type passend bij jouw merk"
       chips={[
         { icon: Sliders, label: "Tone sliders" },
         { icon: PenLine, label: "Verboden woorden" },
@@ -520,8 +520,8 @@ function InstellingenSection() {
         {
           src: SCREENS.instellingenTone,
           url: "qozen.ai/instellingen/tone-of-voice",
-          alt: "Tone of voice sliders met live preview-bericht",
-          label: "Tone-of-voice",
+          alt: "Tone of voice sliders met live preview bericht",
+          label: "Tone of voice",
         },
       ]}
     />
@@ -535,18 +535,18 @@ function InstellingenSection() {
 const WHY_QOZEN: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: Inbox,
-    title: "Eén intake, minder ruis",
-    text: "Structureer binnenkomende kandidaten, parseer CV's en krijg match-scores voordat je handmatig filtert.",
+    title: "Eén intake met minder ruis",
+    text: "Structureer binnenkomende kandidaten parseer cv's en krijg match-scores voordat je zelf filtert",
   },
   {
     icon: GitBranch,
     title: "Doorlopende flow",
-    text: "Van score naar pipeline, draft naar goedkeuring en reactie naar agenda, zonder constant te wisselen van tool.",
+    text: "Van score naar pipeline en draft naar goedkeuring en reactie in de agenda zonder steeds van tool te wisselen",
   },
   {
     icon: ShieldCheck,
-    title: "Controle & uitleg",
-    text: "Human-in-the-loop, drempels per berichttype en ‘waarom dit’ bij elke AI-actie.",
+    title: "Controle en uitleg",
+    text: "Mens in the loop met drempels per berichttype en waarom dit bij elke AI actie",
   },
 ];
 
@@ -568,11 +568,11 @@ function WhyQozen() {
               Waarom Qozen
             </span>
             <h2 className="mt-6 font-display display-tight text-display-md font-semibold text-balance text-ink">
-              Minder versnippering, sneller plaatsen
+              Minder versnippering en sneller plaatsen
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-              Drie principes die deze cockpit scherp houden, zonder het verhaal
-              drie keer te herhalen.
+              Drie principes die deze cockpit scherp houden zonder het verhaal drie
+              keer te herhalen
             </p>
           </div>
         </ScrollReveal>
@@ -634,13 +634,13 @@ function FinalCTA() {
             </div>
             <span className="relative inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-accent">
               <Sparkles className="h-3 w-3" />
-              Pilot €399/mnd · €0 setup
+              Pilot €399 per maand en €0 setup
             </span>
             <h2 className="relative mt-7 heading-section text-balance">
-              Klaar om jouw bureau te transformeren?
+              Klaar om jouw bureau te transformeren
             </h2>
             <p className="relative mx-auto mt-4 max-w-lg text-base leading-relaxed text-muted">
-              30 minuten workflow-scan om scope en eerste stap af te stemmen.
+              30 minuten workflow-scan om scope en eerste stap af te stemmen
             </p>
             <div className="relative mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
               <MagneticButton
