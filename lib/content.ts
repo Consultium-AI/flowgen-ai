@@ -47,7 +47,7 @@ export const HERO = {
   primaryCta: { label: "Plan gratis workflow-scan", href: "/workflow-scan" },
   secondaryCta: { label: "Bekijk demo", href: "/#case-study" },
   priceline:
-    "PILOT VANAF \u20ac399/MAAND · \u20ac0 SETUP · \u00e9\u00e9N WORKFLOW",
+    "PILOT VANAF \u20ac399/MAAND"
 };
 
 export const PROBLEMS = {
