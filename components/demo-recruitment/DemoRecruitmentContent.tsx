@@ -176,12 +176,12 @@ function DemoHero() {
 
           <motion.h1
             variants={heroItem}
-            className="font-display display-tight text-display-xl font-medium text-balance w-full min-w-0 max-w-4xl hyphens-auto px-1 sm:px-2"
+            className="font-display display-tight text-display-lg font-medium text-balance w-full min-w-0 max-w-5xl px-1 sm:px-2 max-md:hyphens-auto"
           >
-            <span className="block [overflow-wrap:anywhere]">
+            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
               De operationele dashboard
             </span>
-            <span className="block [overflow-wrap:anywhere]">
+            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
               voor{" "}
               <span className="text-gradient-accent italic">
                 recruitmentbureaus
