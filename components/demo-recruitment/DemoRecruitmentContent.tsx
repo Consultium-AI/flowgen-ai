@@ -193,7 +193,7 @@ function DemoHero() {
             variants={heroItem}
             className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
           >
-            Inbox, screening, goedkeuringen en pipeline in één plek — zonder
+            Inbox, screening, goedkeuringen en pipeline in één plek, zonder
             tool-hop.
           </motion.p>
 
@@ -353,10 +353,10 @@ function KandidatenSection() {
       icon={Users}
       eyebrow="Module 02 · Kandidaten"
       title="Centrale kandidaten-inbox met AI-screening"
-      lead="Importeer, laat matchen en samenvatten — voordat je een CV opent."
+      lead="Importeer, laat matchen en samenvatten, voordat je een CV opent."
       chips={[
         { icon: Filter, label: "Bronnen & filters" },
-        { icon: Brain, label: "Match 0–100%" },
+        { icon: Brain, label: "Match 0 tot 100%" },
         { icon: Sparkles, label: "AI-samenvatting" },
       ]}
       screenshots={[
@@ -452,7 +452,7 @@ function AgendaSection() {
       icon={Calendar}
       eyebrow="Module 05 · Agenda"
       title="Weekoverzicht voor intakes en klantmomenten"
-      lead="Alle afspraken en voorstellen op één tijdlijn — koppelbaar aan je stack."
+      lead="Alle afspraken en voorstellen op één tijdlijn, koppelbaar aan je stack."
       chips={[
         { icon: Calendar, label: "Week & dag" },
         { icon: Sparkles, label: "AI slot-voorstellen" },
@@ -480,11 +480,11 @@ function WorkflowsSection() {
       id="workflows"
       icon={WorkflowIcon}
       eyebrow="Module 06 · Workflows"
-      title="No-code flows: trigger → AI → actie"
+      title="No-code flows: trigger, AI, actie"
       lead="Bouw automatiseringen visueel en zie runs, slagingspercentage en tijdwinst."
       chips={[
         { icon: Zap, label: "Runs & stats" },
-        { icon: ListChecks, label: "Trigger → actie" },
+        { icon: ListChecks, label: "Trigger en actie" },
         { icon: Brain, label: "AI-stappen" },
       ]}
       screenshots={[
@@ -541,7 +541,7 @@ const WHY_QOZEN: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: GitBranch,
     title: "Doorlopende flow",
-    text: "Van score naar pipeline, draft naar goedkeuring en reactie naar agenda — zonder constant te wisselen van tool.",
+    text: "Van score naar pipeline, draft naar goedkeuring en reactie naar agenda, zonder constant te wisselen van tool.",
   },
   {
     icon: ShieldCheck,
@@ -571,7 +571,7 @@ function WhyQozen() {
               Minder versnippering, sneller plaatsen
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-              Drie principes die deze cockpit scherp houden — zonder het verhaal
+              Drie principes die deze cockpit scherp houden, zonder het verhaal
               drie keer te herhalen.
             </p>
           </div>
