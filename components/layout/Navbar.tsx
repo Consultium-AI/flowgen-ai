@@ -20,6 +20,7 @@ export function Navbar() {
   const scrolledRef = useRef(scrolled);
   const navHiddenRef = useRef(navHidden);
   const headerHeightRef = useRef(80);
+  const darkHeroTopRef = useRef<number | null>(null);
   const darkHeroBottomRef = useRef<number | null>(null);
   const pathname = usePathname();
 
@@ -49,20 +50,32 @@ export function Navbar() {
     const measureNavbarBounds = () => {
       const darkHero = darkHeroRef.current;
       headerHeightRef.current = headerRef.current?.offsetHeight ?? 80;
-      darkHeroBottomRef.current = darkHero ? darkHero.offsetTop + darkHero.offsetHeight : null;
+      if (darkHero) {
+        darkHeroTopRef.current = darkHero.offsetTop;
+        darkHeroBottomRef.current = darkHero.offsetTop + darkHero.offsetHeight;
+      } else {
+        darkHeroTopRef.current = null;
+        darkHeroBottomRef.current = null;
+      }
     };
 
     const updateNavbar = () => {
       rafRef.current = null;
       const currentScrollY = window.scrollY;
-      const darkHeroBottom = darkHeroBottomRef.current;
-      const headerBottom = headerHeightRef.current;
+      const heroTop = darkHeroTopRef.current;
+      const heroBottom = darkHeroBottomRef.current;
+      const headerH = headerHeightRef.current;
 
-      if (darkHeroBottom === null) {
-        setScrolled(currentScrollY > 24);
+      let nextScrolled: boolean;
+      if (heroTop === null || heroBottom === null) {
+        nextScrolled = true;
       } else {
-        setScrolled(currentScrollY + headerBottom >= darkHeroBottom);
+        const navTop = currentScrollY;
+        const navBottom = currentScrollY + headerH;
+        const overlapsDarkHero = navBottom > heroTop && navTop < heroBottom;
+        nextScrolled = !overlapsDarkHero;
       }
+      setScrolled(nextScrolled);
 
       setNavHidden(currentScrollY > 80 && !openRef.current);
     };
