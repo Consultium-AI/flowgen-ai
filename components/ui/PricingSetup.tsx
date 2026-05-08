@@ -1,15 +1,24 @@
+import { cn } from "@/lib/utils";
+
 type PricingSetupProps = {
   setup: string;
   featured?: boolean;
 };
 
-/** Highlights Pilot-style €0 setup when paired with the featured tier card. */
+/** Highlights €0 setup (Pilot tier). */
 export function PricingSetup({ setup, featured }: PricingSetupProps) {
-  const zeroFeaturedPilotStyle = setup === "\u20ac0" && featured;
+  const zeroSetup = setup === "\u20ac0";
 
-  if (zeroFeaturedPilotStyle) {
+  if (zeroSetup) {
     return (
-      <div className="mt-6 rounded-xl border border-accent/45 bg-accent/[0.09] px-4 py-4 ring-1 ring-accent/15 sm:px-5 sm:py-5">
+      <div
+        className={cn(
+          "mt-6 rounded-xl border px-4 py-4 ring-1 sm:px-5 sm:py-5",
+          featured
+            ? "border-accent/45 bg-accent/[0.09] ring-accent/15"
+            : "border-accent/35 bg-accent/[0.07] ring-accent/10",
+        )}
+      >
         <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
           Setup
         </span>

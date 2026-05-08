@@ -46,7 +46,8 @@ export const HERO = {
     "Van leads en rapportages tot approvals, afspraken en follow-ups. Qozen AI bouwt AI-workflows die je team kan volgen, controleren en verbeteren.",
   primaryCta: { label: "Plan gratis workflow-scan", href: "/workflow-scan" },
   secondaryCta: { label: "Bekijk demo", href: "/#case-study" },
-  priceline: "PILOT VANAF \u20ac399/MAAND",
+  priceline:
+    "PILOT VANAF \u20ac399/MAAND · \u20ac0 SETUP · \u00e9\u00e9N WORKFLOW",
 };
 
 export const PROBLEMS = {
@@ -144,30 +145,18 @@ export const TARGET_AUDIENCES = {
       icon: "Megaphone",
       description:
         "Contentprestaties, rapportages, campagne-overzichten en klantupdates centraliseren.",
-      demo: {
-        href: "/workflow-scan?van=marketing-social",
-        label: "Bekijk demo",
-      },
     },
     {
       name: "Trainings- en onderwijsorganisaties",
       icon: "GraduationCap",
       description:
         "Aanvragen, inschrijvingen, demo\u2019s, deelnemerscommunicatie en opvolging structureren.",
-      demo: {
-        href: "/workflow-scan?van=onderwijs-training",
-        label: "Bekijk demo",
-      },
     },
     {
       name: "Dienstverlenende bedrijven",
       icon: "Briefcase",
       description:
         "Leads, offertes, opvolgmails en afspraken automatisch laten bijhouden.",
-      demo: {
-        href: "/workflow-scan?van=dienstverlening",
-        label: "Bekijk demo",
-      },
     },
   ],
 };
@@ -180,7 +169,8 @@ export const DIENSTEN = {
       name: "AI Lead & Follow-up Dashboard",
       description:
         "Voor bedrijven die leads, aanvragen of kandidaten sneller willen opvolgen.",
-      price: "Vanaf \u20ac750 setup + \u20ac399/maand",
+      price:
+        "Pilot vanaf \u20ac399/mnd · \u20ac0 setup (\u00e9\u00e9n workflow, lichte import)",
       icon: "LayoutDashboard",
     },
     {
@@ -207,7 +197,8 @@ export const DIENSTEN = {
       name: "Recruitment Follow-up Dashboard",
       description:
         "Kandidaten, klanten, interviews en follow-ups in \u00e9\u00e9n overzicht.",
-      price: "Vanaf \u20ac750 setup + \u20ac399/maand",
+      price:
+        "Pilot vanaf \u20ac399/mnd · \u20ac0 setup (\u00e9\u00e9n workflow, lichte import)",
       icon: "UserSearch",
     },
     {
@@ -275,33 +266,36 @@ export const HOW_IT_WORKS = {
 export const PRICING = {
   eyebrow: "Pricing",
   title: "Transparante prijzen, duidelijke scope",
-  note: "Alle pakketten starten met een duidelijke scope. Extra workflows, WhatsApp-integraties, CRM/ATS-koppelingen, API-kosten en externe toolkosten worden apart besproken. Zo blijft het project overzichtelijk en voorkom je onverwachte kosten.",
+  note:
+    "De recruitment-demo op de site toont de volledige productvisie. De Pilot start bewust klein: één afgebakende workflow zonder zware integraties (typisch import via CSV, Google Sheet, formulier of handmatig). Uitgebreide cockpit, meerdere workflows en koppelingen zoals ATS, LinkedIn, Gmail, Outlook of WhatsApp worden apart gescoped en geprijsd — zo blijft de eerste maand voorspelbaar. Na bewezen waarde schalen we op richting Growth (vanaf \u20ac799/mnd) of maatwerk (vanaf \u20ac899/mnd).",
   items: [
     {
       name: "Pilot",
-      description: "Voor eerste workflow of kleine bedrijven",
-      setup: "\u20ac750",
+      description:
+        "E\u00e9n recruitment-workflow zonder zware integraties (\u20ac0 setup)",
+      setup: "\u20ac0",
       price: "\u20ac399",
       cadence: "/ maand",
       cta: { label: "Workflow-scan voor Pilot", href: "/workflow-scan?van=pilot" },
       features: [
         "1 dashboard",
-        "1 workflow",
-        "1 leadbron of formulier",
-        "AI-samenvatting",
-        "AI-conceptmail",
+        "1 workflow (scope in workflow-scan)",
+        "Start: CSV, Google Sheet, webformulier of handmatige import",
+        "AI-samenvatting & match-score",
+        "AI-conceptmail / outreach-draft",
         "Approval inbox",
         "2 follow-upmomenten",
-        "Basic support",
-        "Maandelijkse kleine optimalisatie",
+        "Basic support + maandelijkse kleine optimalisatie",
+        "Zware integraties apart te scope\u2019n",
       ],
       featured: false,
     },
     {
       name: "Growth",
-      description: "Voor bedrijven met meerdere opvolgprocessen",
+      description:
+        "Na succesvolle Pilot: meerdere workflows en actiever gebruik (vaak \u20ac799\u2013\u20ac999/mnd)",
       setup: "\u20ac1.500",
-      price: "\u20ac599",
+      price: "\u20ac799",
       cadence: "/ maand",
       cta: { label: "Workflow-scan voor Growth", href: "/workflow-scan?van=growth" },
       features: [

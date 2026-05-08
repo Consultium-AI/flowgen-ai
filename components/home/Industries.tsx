@@ -103,12 +103,14 @@ export function Industries() {
                   <p className="text-base leading-relaxed text-muted sm:text-lg">
                     {item.description}
                   </p>
-                  <div className="mt-8">
-                    <MagneticButton href={item.demo.href}>
-                      {item.demo.label}
-                      <ArrowRight className="h-4 w-4" aria-hidden />
-                    </MagneticButton>
-                  </div>
+                  {"demo" in item && item.demo ? (
+                    <div className="mt-8">
+                      <MagneticButton href={item.demo.href}>
+                        {item.demo.label}
+                        <ArrowRight className="h-4 w-4" aria-hidden />
+                      </MagneticButton>
+                    </div>
+                  ) : null}
                 </div>
               </motion.div>
             </AnimatePresence>

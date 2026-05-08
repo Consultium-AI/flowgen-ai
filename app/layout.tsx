@@ -50,10 +50,6 @@ export const metadata: Metadata = {
   creator: "Qozen AI",
   publisher: "Qozen AI",
   formatDetection: { email: false, address: false, telephone: false },
-  icons: {
-    icon: "/images/Qlogo.png",
-    apple: "/images/Qlogo.png",
-  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
