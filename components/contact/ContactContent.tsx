@@ -13,7 +13,10 @@ const FAQ = dynamic(() => import("@/components/home/FAQ").then((mod) => mod.FAQ)
 export function ContactContent() {
   return (
     <>
-      <section className="hero-dark relative isolate overflow-hidden pb-12 pt-36 sm:pt-44">
+      <section
+        data-navbar-theme="dark"
+        className="hero-dark relative isolate overflow-hidden pb-12 pt-36 sm:pt-44"
+      >
         <SectionBackground
           variant="mesh"
           shade="dark"

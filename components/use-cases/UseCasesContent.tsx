@@ -22,7 +22,10 @@ export function UseCasesContent() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-dark relative isolate overflow-hidden pb-24 pt-36 sm:pt-44">
+      <section
+        data-navbar-theme="dark"
+        className="hero-dark relative isolate overflow-hidden pb-24 pt-36 sm:pt-44"
+      >
         <SectionBackground
           variant="aurora"
           shade="dark"

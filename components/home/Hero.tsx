@@ -134,17 +134,17 @@ export function Hero() {
 
           <motion.h1
             variants={item}
-            className="font-display display-tight text-display-xl font-medium text-ink text-balance w-full min-w-0 max-w-4xl hyphens-auto px-1 sm:px-2"
+            className="font-display display-tight text-display-xl font-medium text-ink text-balance w-full min-w-0 max-w-4xl px-1 sm:px-2 max-md:hyphens-auto"
           >
-            <span className="block [overflow-wrap:anywhere]">
+            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
               AI-automatiseringen met
             </span>
-            <span className="block [overflow-wrap:anywhere]">
+            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
               <span className="text-gradient-accent italic">
-                &eacute;&eacute;n dashboard
+                &eacute;&eacute;n dashboard ‎ 
               </span>
             </span>
-            <span className="block [overflow-wrap:anywhere]">
+            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
               voor je hele workflow
             </span>
           </motion.h1>

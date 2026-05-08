@@ -264,9 +264,9 @@ function ModuleNav() {
   }, []);
 
   return (
-    <div className="sticky top-20 z-30 -mt-14 sm:top-24">
+    <div className="sticky top-20 z-30 -mt-14 sm:top-4">
       <div className="container-narrow">
-        <div className="mx-auto flex max-w-5xl items-center gap-1 overflow-x-auto rounded-2xl border border-border bg-white/90 p-1.5 shadow-card backdrop-blur-md">
+        <div className="mx-auto flex w-fit max-w-full items-center gap-1 overflow-x-auto rounded-2xl border border-border bg-white/90 p-1.5 shadow-card backdrop-blur-md sm:w-full sm:max-w-5xl sm:overflow-x-visible">
           {MODULE_NAV.map((m) => {
             const Icon = m.icon;
             const isActive = active === m.id;
@@ -275,7 +275,7 @@ function ModuleNav() {
                 key={m.id}
                 href={`#${m.id}`}
                 className={cn(
-                  "relative flex shrink-0 items-center gap-2 rounded-full px-3 py-2 text-xs font-semibold transition-colors duration-200 sm:px-4 sm:text-sm",
+                  "relative flex shrink-0 items-center gap-2 rounded-full px-3 py-2 text-xs font-semibold transition-colors duration-200 sm:min-w-0 sm:flex-1 sm:justify-center sm:px-2 sm:text-sm md:px-3",
                   isActive ? "text-accent" : "text-muted hover:text-ink",
                 )}
               >

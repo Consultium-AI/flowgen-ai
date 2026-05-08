@@ -10,7 +10,10 @@ export function AboutContent() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-dark relative isolate overflow-hidden pb-16 pt-36 sm:pt-44">
+      <section
+        data-navbar-theme="dark"
+        className="hero-dark relative isolate overflow-hidden pb-16 pt-36 sm:pt-44"
+      >
         <SectionBackground
           variant="rings"
           shade="dark"

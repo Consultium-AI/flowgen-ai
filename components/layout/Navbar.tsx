@@ -10,18 +10,12 @@ import { NAV_LINKS, SITE } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const [scrolled, setScrolledState] = useState(false);
   const [navHidden, setNavHiddenState] = useState(false);
   const [open, setOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
-  const darkHeroRef = useRef<HTMLElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const openRef = useRef(open);
-  const scrolledRef = useRef(scrolled);
   const navHiddenRef = useRef(navHidden);
-  const headerHeightRef = useRef(80);
-  const darkHeroTopRef = useRef<number | null>(null);
-  const darkHeroBottomRef = useRef<number | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -33,51 +27,15 @@ export function Navbar() {
   }, [open]);
 
   useEffect(() => {
-    darkHeroRef.current = document.querySelector<HTMLElement>('[data-navbar-theme="dark"]');
-
-    const setScrolled = (nextScrolled: boolean) => {
-      if (scrolledRef.current === nextScrolled) return;
-      scrolledRef.current = nextScrolled;
-      setScrolledState(nextScrolled);
-    };
-
-    const setNavHidden = (nextNavHidden: boolean) => {
-      if (navHiddenRef.current === nextNavHidden) return;
-      navHiddenRef.current = nextNavHidden;
-      setNavHiddenState(nextNavHidden);
-    };
-
-    const measureNavbarBounds = () => {
-      const darkHero = darkHeroRef.current;
-      headerHeightRef.current = headerRef.current?.offsetHeight ?? 80;
-      if (darkHero) {
-        darkHeroTopRef.current = darkHero.offsetTop;
-        darkHeroBottomRef.current = darkHero.offsetTop + darkHero.offsetHeight;
-      } else {
-        darkHeroTopRef.current = null;
-        darkHeroBottomRef.current = null;
-      }
-    };
-
     const updateNavbar = () => {
       rafRef.current = null;
       const currentScrollY = window.scrollY;
-      const heroTop = darkHeroTopRef.current;
-      const heroBottom = darkHeroBottomRef.current;
-      const headerH = headerHeightRef.current;
 
-      let nextScrolled: boolean;
-      if (heroTop === null || heroBottom === null) {
-        nextScrolled = true;
-      } else {
-        const navTop = currentScrollY;
-        const navBottom = currentScrollY + headerH;
-        const overlapsDarkHero = navBottom > heroTop && navTop < heroBottom;
-        nextScrolled = !overlapsDarkHero;
+      const nextNavHidden = currentScrollY > 80 && !openRef.current;
+      if (navHiddenRef.current !== nextNavHidden) {
+        navHiddenRef.current = nextNavHidden;
+        setNavHiddenState(nextNavHidden);
       }
-      setScrolled(nextScrolled);
-
-      setNavHidden(currentScrollY > 80 && !openRef.current);
     };
 
     const onScroll = () => {
@@ -85,34 +43,14 @@ export function Navbar() {
       rafRef.current = window.requestAnimationFrame(updateNavbar);
     };
 
-    const onResize = () => {
-      measureNavbarBounds();
-      updateNavbar();
-    };
-
-    measureNavbarBounds();
     updateNavbar();
 
-    const resizeObserver =
-      typeof ResizeObserver !== "undefined"
-        ? new ResizeObserver(() => {
-            measureNavbarBounds();
-            onScroll();
-          })
-        : null;
-
-    if (resizeObserver) {
-      if (headerRef.current) resizeObserver.observe(headerRef.current);
-      if (darkHeroRef.current) resizeObserver.observe(darkHeroRef.current);
-    }
-
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onResize);
+    window.addEventListener("resize", updateNavbar);
     return () => {
       if (rafRef.current !== null) window.cancelAnimationFrame(rafRef.current);
-      resizeObserver?.disconnect();
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("resize", updateNavbar);
     };
   }, [pathname]);
 
@@ -146,21 +84,19 @@ export function Navbar() {
       className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-4 sm:pt-6"
     >
       <motion.div
-        className={cn(
-          "relative flex w-full items-center justify-between rounded-2xl border px-4 py-3 transition-[background,border,box-shadow] duration-500 sm:px-5 sm:py-3.5",
-          scrolled
-            ? "border-border bg-white/94 shadow-[0_18px_45px_-34px_rgba(15,23,42,0.45)] backdrop-blur-xl"
-            : "border-white/20 bg-slate-950/45 shadow-[0_18px_45px_-38px_rgba(0,0,0,0.7)] backdrop-blur-md",
-        )}
+        className="relative flex w-full items-center justify-between rounded-2xl border px-4 py-3 backdrop-blur-xl sm:px-5 sm:py-3.5"
+        style={{
+          backgroundColor: "rgba(15, 23, 42, 0.92)",
+          borderColor: "rgba(255, 255, 255, 0.28)",
+          boxShadow:
+            "0 18px 45px -30px rgba(0,0,0,0.85), inset 0 0 0 1px rgba(255,255,255,0.06)",
+        }}
       >
         <div className="flex items-center gap-2.5">
           <Logo
-            className={scrolled ? undefined : "text-white"}
+            className="text-white"
             markSrc="/images/Wlogo.png"
-            markClassName={cn(
-              "bg-black p-0.5 shadow-sm",
-              scrolled ? "ring-black/20" : "ring-white/25",
-            )}
+            markClassName="bg-black p-0.5 shadow-sm ring-white/25"
           />
         </div>
 
@@ -174,21 +110,14 @@ export function Navbar() {
                 className={cn(
                   "relative rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors duration-200",
                   active
-                    ? scrolled
-                      ? "text-accent"
-                      : "text-white"
-                    : scrolled
-                      ? "text-ink/70 hover:text-ink"
-                      : "text-slate-200 hover:text-white",
+                    ? "text-white"
+                    : "text-slate-100 hover:text-white",
                 )}
               >
                 {active && (
                   <motion.span
                     layoutId="nav-active"
-                    className={cn(
-                      "absolute inset-0 -z-0 rounded-xl",
-                      scrolled ? "bg-accent/10" : "bg-white/10",
-                    )}
+                    className="absolute inset-0 -z-0 rounded-xl bg-white/10"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -224,12 +153,7 @@ export function Navbar() {
           type="button"
           aria-label="Menu"
           aria-expanded={open}
-          className={cn(
-            "rounded-xl border p-2.5 md:hidden",
-            scrolled
-              ? "border-border bg-white text-ink"
-              : "border-white/20 bg-white/10 text-white",
-          )}
+          className="rounded-xl border border-white/20 bg-white/10 p-2.5 text-white md:hidden"
           onClick={() => setOpen((o) => !o)}
         >
           <AnimatePresence mode="wait" initial={false}>
@@ -267,22 +191,14 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3, ease: [0.21, 0.6, 0.36, 1] }}
-            className="absolute left-4 right-4 top-[78px] overflow-hidden rounded-2xl border border-border bg-white shadow-card md:hidden"
+            className="absolute left-4 right-4 top-[78px] overflow-hidden rounded-2xl border md:hidden"
+            style={{
+              backgroundColor: "rgba(15, 23, 42, 0.96)",
+              borderColor: "rgba(255, 255, 255, 0.18)",
+              boxShadow:
+                "0 18px 45px -30px rgba(0,0,0,0.85), inset 0 0 0 1px rgba(255,255,255,0.06)",
+            }}
           >
-            {/* Layered mobile menu background */}
-            <div
-              aria-hidden
-              className="absolute inset-0 -z-10"
-              style={{ backgroundColor: "#FFFFFF" }}
-            />
-            <div
-              aria-hidden
-              className="absolute inset-0 -z-10"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 30% 0%, rgba(16,185,129,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(20,184,166,0.05) 0%, transparent 60%)",
-              }}
-            />
             <div className="relative backdrop-blur-xl">
               <nav className="flex flex-col gap-1 p-4">
                 {NAV_LINKS.map((link, i) => {
@@ -300,8 +216,8 @@ export function Navbar() {
                         className={cn(
                           "flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors",
                           active
-                            ? "bg-accent/10 text-accent"
-                            : "text-ink/80 hover:bg-bg-card hover:text-ink",
+                            ? "bg-white/10 text-white"
+                            : "text-slate-100 hover:bg-white/5 hover:text-white",
                         )}
                       >
                         {link.label}
@@ -310,7 +226,7 @@ export function Navbar() {
                     </motion.div>
                   );
                 })}
-                <div className="mt-2 border-t border-border pt-3">
+                <div className="mt-2 border-t border-white/15 pt-3">
                   {SITE.cal.strategy.startsWith("http") ? (
                     <a
                       href={SITE.cal.strategy}
