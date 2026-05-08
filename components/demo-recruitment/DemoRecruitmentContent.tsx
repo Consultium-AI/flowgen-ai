@@ -176,9 +176,9 @@ function DemoHero() {
 
           <motion.h1
             variants={heroItem}
-            className="font-display display-tight text-display-xl font-medium text-balance"
+            className="font-display display-tight text-display-xl font-medium text-balance w-full min-w-0 max-w-4xl hyphens-auto px-1 sm:px-2"
           >
-            <span className="block md:whitespace-nowrap">
+            <span className="block [overflow-wrap:anywhere]">
               De operationele cockpit voor{" "}
               <span className="text-gradient-accent italic">
                 recruitmentbureaus
