@@ -16,8 +16,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-  /* Reserve scrollbar gutter so centered layout matches the visible viewport (Windows/classic scrollbars). */
-  scrollbar-gutter: stable;
 }
 
 body {
