@@ -358,6 +358,115 @@ export const DIENSTEN_PAGE = {
   secondaryCta: { label: "Bekijk productdemo", href: "/demo-recruitment" },
 };
 
+/** Homepage Comparison — controle / veiligheid (zie `components/home/Comparison.tsx`). */
+export const SECURITY = {
+  eyebrow: "Vertrouwen",
+  title: "Controle waar het telt",
+  description:
+    "AI bereidt acties voor, maar jouw team bewaakt wat er naar buiten gaat. Geen mails of berichten zonder expliciete goedkeuring.",
+  items: [
+    "Approval inbox: outbound acties eerst naar review, pas daarna live",
+    "Per item zichtbaar wie wat heeft goedgekeurd of geweigerd",
+    "Heldere grenzen tussen automatisering en menselijke tussenkomst",
+    "AVG-bewuste opzet en transparante datastromen binnen pilots",
+    "Dashboard waar je alle actieve workflows en statussen in \u00e9\u00e9n blik volgt",
+  ],
+};
+
+/** Homepage diensten-kaarten (`components/home/DienstenList.tsx`). `icon` = key uit ICONS-mapping. */
+export const DIENSTEN = {
+  eyebrow: "Mogelijkheden",
+  title: "Wat het Operations Dashboard voor je team doet",
+  items: [
+    {
+      name: "Centraal overzicht",
+      description:
+        "Leads, taken en statussen in \u00e9\u00e9n werkruimte in plaats van verspreide tabbladen.",
+      icon: "LayoutDashboard",
+    },
+    {
+      name: "Approval inbox",
+      description:
+        "AI-concepten en follow-ups worden klaargezet; niets gaat outbound zonder groen licht.",
+      icon: "MailCheck",
+    },
+    {
+      name: "Kalender \u0026 opvolgmomenten",
+      description:
+        "Geplande acties en reminders gekoppeld aan je pipeline.",
+      icon: "CalendarCheck",
+    },
+    {
+      name: "Inzicht \u0026 rapportage",
+      description:
+        "Wekelijkse samenvattingen en KPI\u2019s die je uit je mailbox haalt.",
+      icon: "BarChart3",
+    },
+    {
+      name: "Matching \u0026 prioriteit",
+      description:
+        "Scores en tags zodat je team eerst oppakt wat het meeste oplevert.",
+      icon: "UserSearch",
+    },
+    {
+      name: "Modulaire workflows",
+      description:
+        "Start met \u00e9\u00e9n proces; breid gericht uit wanneer de eerste pilot loopt.",
+      icon: "PuzzlePiece",
+    },
+    {
+      name: "Integraties",
+      description:
+        "Mail, formulieren, ATS/CRM waar haalbaar; maatwerk in overleg voor complex.",
+      icon: "Plug",
+    },
+  ],
+};
+
+/** Case-study screenshots (`components/home/Testimonials.tsx`). Publieke paden onder `/public/screenshots`. */
+export const CASE_STUDY = {
+  eyebrow: "Voorbeeld",
+  title: "Zo oogt jouw Operations Dashboard",
+  description:
+    "Onderstaande voorbeeldschermen illustreren hoe leads, approvals en agenda samenkomen. Exacte koppen en kleuren stemmen we af tijdens pilot.",
+  screenshots: [
+    {
+      label: "Overview",
+      image: "/screenshots/overview.png",
+      placeholder:
+        "Pipeline en status van alle items die aandacht nodig hebben.",
+    },
+    {
+      label: "Leads",
+      image: "/screenshots/leads.png",
+      placeholder: "Inkomende aanvragen en AI-samenvatting per lead.",
+    },
+    {
+      label: "Approvals",
+      image: "/screenshots/approvals.png",
+      placeholder: "Berichten wachtend op akkoord van het team.",
+    },
+    {
+      label: "Follow-ups",
+      image: "/screenshots/followups.png",
+      placeholder: "Automatisch voorgestelde vervolgstappen bij te benaderen dossiers.",
+    },
+    {
+      label: "Agenda",
+      image: "/screenshots/calendar.png",
+      placeholder: "Momenten gekoppeld aan je workflow en SLA\u2019s.",
+    },
+    {
+      label: "Settings",
+      image: "/screenshots/settings.png",
+      placeholder: "Rol- en werkruimteinrichting tijdens onboarding.",
+    },
+  ],
+  note:
+    "Interesse in een echte walkthrough met jouw sector? Dat doen we in de workflow-scan.",
+  subtitle: "UI is merk-neutraal op te zetten; dit is puur voorbeeld.",
+};
+
 // Legacy exports for pages that still reference old names
 export const FEATURES = PROBLEMS;
 export const WORKFLOW = HOW_IT_WORKS;
