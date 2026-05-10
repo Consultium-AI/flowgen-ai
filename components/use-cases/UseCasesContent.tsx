@@ -24,7 +24,7 @@ export function UseCasesContent() {
       {/* Hero */}
       <section
         data-navbar-theme="dark"
-        className="hero-dark relative isolate overflow-hidden pb-24 pt-36 sm:pt-44"
+        className="hero-dark page-hero relative isolate overflow-hidden pb-24 pt-36 sm:pt-44"
       >
         <SectionBackground
           variant="aurora"
@@ -33,16 +33,18 @@ export function UseCasesContent() {
           intensity="high"
         />
         <div className="container-narrow relative">
-          <ScrollReveal delay={0.1}>
-            <h1 className="heading-display max-w-3xl text-balance">
-              {USE_CASES.hero.title}
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="mt-6 max-w-xl text-base sm:text-lg text-muted">
-              {USE_CASES.hero.subtitle}
-            </p>
-          </ScrollReveal>
+          <div className="page-hero-copy">
+            <ScrollReveal delay={0.1}>
+              <h1 className="heading-display max-w-3xl text-balance">
+                {USE_CASES.hero.title}
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <p className="mt-6 max-w-xl text-base sm:text-lg text-muted">
+                {USE_CASES.hero.subtitle}
+              </p>
+            </ScrollReveal>
+          </div>
 
           <ScrollReveal delay={0.3}>
             <div className="mt-10 flex flex-wrap gap-2">

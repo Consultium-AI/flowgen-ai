@@ -116,7 +116,7 @@ function DemoHero() {
   return (
     <section
       data-navbar-theme="dark"
-      className="hero-dark relative isolate overflow-hidden pb-32 pt-28 sm:pt-36 lg:pt-40"
+      className="hero-dark page-hero relative isolate overflow-hidden pb-32 pt-28 sm:pt-36 lg:pt-40"
     >
       <div
         aria-hidden
@@ -166,36 +166,38 @@ function DemoHero() {
           animate="show"
           className="mx-auto flex max-w-4xl flex-col items-center text-center"
         >
-          <motion.span
-            variants={heroItem}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/90"
-          >
-            <Sparkles className="h-3 w-3 text-accent-glow" />
-            Demo AI Recruitment Ops
-          </motion.span>
+          <div className="page-hero-copy flex flex-col items-center">
+            <motion.span
+              variants={heroItem}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/90"
+            >
+              <Sparkles className="h-3 w-3 text-accent-glow" />
+              Demo AI Recruitment Ops
+            </motion.span>
 
-          <motion.h1
-            variants={heroItem}
-            className="font-display display-tight text-display-lg font-medium text-balance w-full min-w-0 max-w-5xl px-1 sm:px-2 max-md:hyphens-auto"
-          >
-            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
-              De operationele dashboard
-            </span>
-            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
-              voor{" "}
-              <span className="text-gradient-accent italic">
-                recruitmentbureaus
+            <motion.h1
+              variants={heroItem}
+              className="font-display display-tight text-display-lg font-medium text-balance w-full min-w-0 max-w-5xl px-1 sm:px-2 max-md:hyphens-auto"
+            >
+              <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
+                De operationele dashboard
               </span>
-            </span>
-          </motion.h1>
+              <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
+                voor{" "}
+                <span className="text-gradient-accent italic">
+                  recruitmentbureaus
+                </span>
+              </span>
+            </motion.h1>
 
-          <motion.p
-            variants={heroItem}
-            className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
-          >
-            Inbox screening goedkeuringen en pipeline in één plek zonder
-            toolhop
-          </motion.p>
+            <motion.p
+              variants={heroItem}
+              className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg"
+            >
+              Inbox screening goedkeuringen en pipeline in één plek zonder
+              toolhop
+            </motion.p>
+          </div>
 
           <motion.div
             variants={heroItem}

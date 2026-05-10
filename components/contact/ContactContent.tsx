@@ -36,7 +36,7 @@ export function ContactContent() {
     <>
       <section
         data-navbar-theme="dark"
-        className="hero-dark relative isolate overflow-hidden pb-24 pt-[6.75rem] sm:pb-28 sm:pt-32 lg:pb-36 lg:pt-[8.75rem]"
+        className="hero-dark page-hero relative isolate overflow-hidden pb-24 pt-[6.75rem] sm:pb-28 sm:pt-32 lg:pb-36 lg:pt-[8.75rem]"
       >
         <div aria-hidden className="absolute inset-0 -z-10">
           <div
@@ -115,6 +115,7 @@ export function ContactContent() {
             className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,min(520px,100%))] lg:items-start lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,540px)] xl:gap-16"
           >
             <div className="flex min-w-0 flex-col">
+              <div className="page-hero-copy">
               {CONTACT.eyebrow ? (
                 <motion.p
                   variants={heroItem}
@@ -135,6 +136,7 @@ export function ContactContent() {
               >
                 {CONTACT.subtitle}
               </motion.p>
+              </div>
 
               <motion.div
                 variants={heroItem}

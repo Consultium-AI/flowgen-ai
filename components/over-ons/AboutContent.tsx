@@ -32,7 +32,7 @@ export function AboutContent() {
     <>
       <section
         data-navbar-theme="dark"
-        className="hero-dark relative isolate overflow-hidden pb-28 pt-28 sm:pb-32 sm:pt-36 lg:pb-36 lg:pt-40"
+        className="hero-dark page-hero relative isolate overflow-hidden pb-28 pt-28 sm:pb-32 sm:pt-36 lg:pb-36 lg:pt-40"
       >
         <div aria-hidden className="absolute inset-0 -z-10">
           <div
@@ -103,28 +103,30 @@ export function AboutContent() {
             animate="show"
             className="mx-auto flex max-w-3xl flex-col lg:mx-0"
           >
-            {ABOUT.hero.eyebrow ? (
-              <motion.p
+            <div className="page-hero-copy">
+              {ABOUT.hero.eyebrow ? (
+                <motion.p
+                  variants={heroItem}
+                  className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/52"
+                >
+                  {ABOUT.hero.eyebrow}
+                </motion.p>
+              ) : null}
+              <motion.h1
                 variants={heroItem}
-                className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/52"
+                className="font-display display-tight mt-4 max-w-xl text-display-md font-medium text-[#f8fafc] text-balance sm:mt-5 sm:text-display-lg"
               >
-                {ABOUT.hero.eyebrow}
-              </motion.p>
-            ) : null}
-            <motion.h1
-              variants={heroItem}
-              className="font-display display-tight mt-4 max-w-xl text-display-md font-medium text-[#f8fafc] text-balance sm:mt-5 sm:text-display-lg"
-            >
-              {ABOUT.hero.title}
-            </motion.h1>
-            {ABOUT.hero.subtitle ? (
-              <motion.p
-                variants={heroItem}
-                className="body-lg mt-6 max-w-2xl text-white/[0.74] sm:text-lg"
-              >
-                {ABOUT.hero.subtitle}
-              </motion.p>
-            ) : null}
+                {ABOUT.hero.title}
+              </motion.h1>
+              {ABOUT.hero.subtitle ? (
+                <motion.p
+                  variants={heroItem}
+                  className="body-lg mt-6 max-w-2xl text-white/[0.74] sm:text-lg"
+                >
+                  {ABOUT.hero.subtitle}
+                </motion.p>
+              ) : null}
+            </div>
             <motion.div
               variants={heroItem}
               className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4"

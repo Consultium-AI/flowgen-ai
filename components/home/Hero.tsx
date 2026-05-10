@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <section
       data-navbar-theme="dark"
-      className="hero-dark relative isolate overflow-hidden pb-32 pt-28 sm:pt-36 lg:pt-40"
+      className="hero-dark page-hero relative isolate overflow-hidden pb-32 pt-28 sm:pt-36 lg:pt-40"
     >
       {/* Base + LineWaves (ogl) */}
       <div aria-hidden className="absolute inset-0 -z-10">
@@ -99,29 +99,31 @@ export function Hero() {
           animate="show"
           className="mx-auto flex max-w-4xl flex-col items-center text-center pb-16"
         >
-          <motion.h1
-            variants={item}
-            className="font-display display-tight text-display-xl font-medium text-ink text-balance w-full min-w-0 max-w-4xl px-1 sm:px-2 max-md:hyphens-auto"
-          >
-            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
-              AI-automatiseringen met
-            </span>
-            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
-              <span className="text-gradient-accent italic">
-                &eacute;&eacute;n dashboard ‎ 
+          <div className="page-hero-copy flex w-full max-w-4xl flex-col items-center text-center">
+            <motion.h1
+              variants={item}
+              className="font-display display-tight text-display-xl font-medium text-ink text-balance w-full min-w-0 max-w-4xl px-1 sm:px-2 max-md:hyphens-auto"
+            >
+              <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
+                AI-automatiseringen met
               </span>
-            </span>
-            <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
-              voor je hele workflow
-            </span>
-          </motion.h1>
+              <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
+                <span className="text-gradient-accent-hero-home italic">
+                  &eacute;&eacute;n dashboard ‎ 
+                </span>
+              </span>
+              <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
+                voor je hele workflow
+              </span>
+            </motion.h1>
 
-          <motion.p
-            variants={item}
-            className="mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-muted"
-          >
-            {HERO.subtitle}
-          </motion.p>
+            <motion.p
+              variants={item}
+              className="hero-lead mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-muted"
+            >
+              {HERO.subtitle}
+            </motion.p>
+          </div>
 
           <motion.div
             variants={item}

@@ -36,7 +36,7 @@ export function ServicesContent() {
     <>
       <section
         data-navbar-theme="dark"
-        className="hero-dark relative isolate overflow-hidden pb-28 pt-28 sm:pb-32 sm:pt-36 lg:pb-36 lg:pt-40"
+        className="hero-dark page-hero relative isolate overflow-hidden pb-28 pt-28 sm:pb-32 sm:pt-36 lg:pb-36 lg:pt-40"
       >
         <div aria-hidden className="absolute inset-0 -z-10">
           <div
@@ -107,26 +107,28 @@ export function ServicesContent() {
             animate="show"
             className="mx-auto flex max-w-3xl flex-col lg:mx-0"
           >
-            {DIENSTEN_PAGE.eyebrow ? (
+            <div className="page-hero-copy">
+              {DIENSTEN_PAGE.eyebrow ? (
+                <motion.p
+                  variants={item}
+                  className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/52"
+                >
+                  {DIENSTEN_PAGE.eyebrow}
+                </motion.p>
+              ) : null}
+              <motion.h1
+                variants={item}
+                className="font-display display-tight mt-4 max-w-xl text-display-md font-medium text-[#f8fafc] text-balance sm:mt-5 sm:text-display-lg"
+              >
+                {DIENSTEN_PAGE.title}
+              </motion.h1>
               <motion.p
                 variants={item}
-                className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/52"
+                className="body-lg mt-6 max-w-2xl text-white/[0.74] sm:text-lg"
               >
-                {DIENSTEN_PAGE.eyebrow}
+                {DIENSTEN_PAGE.subtitle}
               </motion.p>
-            ) : null}
-            <motion.h1
-              variants={item}
-              className="font-display display-tight mt-4 max-w-xl text-display-md font-medium text-[#f8fafc] text-balance sm:mt-5 sm:text-display-lg"
-            >
-              {DIENSTEN_PAGE.title}
-            </motion.h1>
-            <motion.p
-              variants={item}
-              className="body-lg mt-6 max-w-2xl text-white/[0.74] sm:text-lg"
-            >
-              {DIENSTEN_PAGE.subtitle}
-            </motion.p>
+            </div>
             <motion.div
               variants={item}
               className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4"

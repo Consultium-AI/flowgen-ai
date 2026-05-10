@@ -45,7 +45,7 @@ export function WorkflowScanContent({ calLink, contextVan }: Props) {
     <>
       <section
         data-navbar-theme="dark"
-        className="hero-dark relative isolate overflow-hidden pb-20 pt-[6.5rem] sm:pb-24 sm:pt-28 lg:pb-28 lg:pt-32"
+        className="hero-dark page-hero relative isolate overflow-hidden pb-20 pt-[6.5rem] sm:pb-24 sm:pt-28 lg:pb-28 lg:pt-32"
       >
         <div aria-hidden className="absolute inset-0 -z-10">
           <div
@@ -123,24 +123,26 @@ export function WorkflowScanContent({ calLink, contextVan }: Props) {
             animate="show"
             className="mx-auto max-w-3xl lg:mx-0 lg:max-w-[40rem]"
           >
-            <motion.p
-              variants={heroItem}
-              className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/52"
-            >
-              {BOOKING.eyebrow}
-            </motion.p>
-            <motion.h1
-              variants={heroItem}
-              className="font-display display-tight mt-4 text-display-md font-medium text-[#f8fafc] text-balance sm:mt-5 sm:text-display-lg"
-            >
-              {BOOKING.title}
-            </motion.h1>
-            <motion.p
-              variants={heroItem}
-              className="mt-6 max-w-2xl text-[0.98rem] leading-[1.72] text-white/[0.78] sm:text-[1.05rem]"
-            >
-              {BOOKING.subtitle}
-            </motion.p>
+            <div className="page-hero-copy">
+              <motion.p
+                variants={heroItem}
+                className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/52"
+              >
+                {BOOKING.eyebrow}
+              </motion.p>
+              <motion.h1
+                variants={heroItem}
+                className="font-display display-tight mt-4 text-display-md font-medium text-[#f8fafc] text-balance sm:mt-5 sm:text-display-lg"
+              >
+                {BOOKING.title}
+              </motion.h1>
+              <motion.p
+                variants={heroItem}
+                className="mt-6 max-w-2xl text-[0.98rem] leading-[1.72] text-white/[0.78] sm:text-[1.05rem]"
+              >
+                {BOOKING.subtitle}
+              </motion.p>
+            </div>
 
             <motion.ul
               variants={heroItem}

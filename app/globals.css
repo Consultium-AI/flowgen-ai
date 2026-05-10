@@ -102,6 +102,21 @@ body {
     color: transparent;
   }
 
+  /* Home hero: “één dashboard” — zeer licht groen/leemint (geen donkere eind-stop) */
+  .text-gradient-accent-hero-home {
+    background: linear-gradient(
+      135deg,
+      #eafff8 6%,
+      #d7fff1 38%,
+      #c7feea 72%,
+      #e7fff6 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
   .grid-bg {
     background-image:
       linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px),
@@ -160,6 +175,52 @@ body {
   .hero-dark .heading-section,
   .hero-dark .text-ink {
     color: #f8fafc;
+  }
+
+  /* Page heroes only (not Footer / mid-page dark bands): blurred halo behind type */
+  .hero-dark.page-hero .page-hero-copy :where(h1) {
+    text-shadow:
+      0 1px 2px rgba(0, 8, 5, 0.52),
+      0 2px 28px rgba(3, 10, 8, 0.55),
+      0 0 68px rgba(3, 8, 6, 0.5);
+  }
+
+  /* Demo / andere accents: halo blijft */
+  .hero-dark.page-hero .page-hero-copy :where(h1) .text-gradient-accent {
+    filter: drop-shadow(0 1px 2px rgba(0, 8, 5, 0.45))
+      drop-shadow(0 0 36px rgba(2, 12, 8, 0.46));
+  }
+
+  /* Home “één dashboard”: geen muft donker over lichte gradient — lichte mint glow */
+  .hero-dark.page-hero .page-hero-copy :where(h1) .text-gradient-accent-hero-home {
+    text-shadow: none;
+    filter: drop-shadow(0 0 20px rgba(160, 255, 218, 0.55))
+      drop-shadow(0 0 48px rgba(90, 220, 165, 0.28))
+      drop-shadow(0 1px 2px rgba(0, 16, 10, 0.18));
+  }
+
+  /* Eyebrow lines (mono label above title) */
+  .hero-dark.page-hero .page-hero-copy :where(p.font-mono.uppercase) {
+    text-shadow:
+      0 1px 10px rgba(3, 8, 6, 0.55),
+      0 0 32px rgba(3, 8, 6, 0.38);
+  }
+
+  /* Lead / subtitle paragraphs (excludes mono eyebrow paragraphs) */
+  .hero-dark.page-hero .page-hero-copy :where(p:not(.font-mono)) {
+    text-shadow:
+      0 1px 16px rgba(3, 8, 6, 0.58),
+      0 0 44px rgba(3, 8, 6, 0.45);
+  }
+
+  .hero-dark.page-hero .page-hero-copy .hero-lead.text-muted {
+    color: rgba(243, 248, 252, 0.88);
+  }
+
+  /* Demo hero pill / badge above title */
+  .hero-dark.page-hero .page-hero-copy > :where(span.rounded-full) {
+    filter: drop-shadow(0 1px 10px rgba(3, 8, 6, 0.5))
+      drop-shadow(0 0 28px rgba(3, 8, 6, 0.35));
   }
 
   .hero-dark .text-muted,
