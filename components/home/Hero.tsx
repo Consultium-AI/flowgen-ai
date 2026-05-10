@@ -97,9 +97,9 @@ export function Hero() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="mx-auto flex max-w-4xl flex-col items-center text-center pb-16"
+          className="mx-auto flex w-full min-w-0 max-w-4xl flex-col items-center text-center pb-16"
         >
-          <div className="page-hero-copy flex w-full max-w-4xl flex-col items-center text-center">
+          <div className="page-hero-copy flex w-full min-w-0 max-w-4xl flex-col items-center text-center">
             <motion.h1
               variants={item}
               className="font-display display-tight text-display-xl font-medium text-ink text-balance w-full min-w-0 max-w-4xl px-1 sm:px-2 max-md:hyphens-auto"

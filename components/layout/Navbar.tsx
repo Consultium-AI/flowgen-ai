@@ -79,7 +79,8 @@ export function Navbar() {
         }
 
         const isDemoRecruitment = pathname?.startsWith("/demo-recruitment");
-        if (isDemoRecruitment) {
+        const isDesktop = window.innerWidth >= 640;
+        if (isDemoRecruitment && isDesktop) {
           const hero = document.getElementById("demo-hero");
           if (hero) {
             const heroBottom = hero.getBoundingClientRect().bottom;
