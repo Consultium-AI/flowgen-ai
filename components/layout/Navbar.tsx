@@ -78,6 +78,18 @@ export function Navbar() {
           return;
         }
 
+        const isDemoRecruitment = pathname?.startsWith("/demo-recruitment");
+        if (isDemoRecruitment) {
+          const hero = document.getElementById("demo-hero");
+          if (hero) {
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            if (heroBottom <= 100) {
+              setNavHidden(true);
+              return;
+            }
+          }
+        }
+
         const goingDown = delta > 6;
         const goingUp = delta < -6;
 

@@ -91,14 +91,16 @@ export function DemoRecruitmentContent() {
   return (
     <>
       <DemoHero />
-      <ModuleNav />
-      <OverzichtSection />
-      <KandidatenSection />
-      <GoedkeuringenSection />
-      <PipelineSection />
-      <AgendaSection />
-      <WorkflowsSection />
-      <InstellingenSection />
+      <div className="relative">
+        <ModuleNav />
+        <OverzichtSection />
+        <KandidatenSection />
+        <GoedkeuringenSection />
+        <PipelineSection />
+        <AgendaSection />
+        <WorkflowsSection />
+        <InstellingenSection />
+      </div>
       <WhyQozen />
       <FinalCTA />
     </>
@@ -131,6 +133,7 @@ function DemoHero() {
 
   return (
     <section
+      id="demo-hero"
       data-navbar-theme="dark"
       className="hero-dark page-hero relative isolate overflow-hidden pb-32 pt-28 sm:pt-36 lg:pt-40"
     >
@@ -225,10 +228,10 @@ function DemoHero() {
               </span>
               <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
                 voor{" "}
-              </span>
-              <span className="text-gradient-accent-hero-home italic">
-                  recruitmentbureaus  ‎ 
+                <span className="text-gradient-accent-hero-home italic">
+                  recruitmentbureaus
                 </span>
+              </span>
             </motion.h1>
 
             <motion.p
@@ -747,26 +750,6 @@ function FinalCTA() {
           </header>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.65, ease }}
-            className="mx-auto mt-14 max-w-2xl sm:mt-16"
-          >
-            <div className="overflow-hidden rounded-[1.25rem] border border-white/[0.09] bg-[#050908]/75 p-10 text-center shadow-[0_40px_120px_-60px_rgba(0,0,0,0.85)] backdrop-blur-sm sm:rounded-2xl sm:p-12">
-              <p className="text-[0.9375rem] leading-relaxed text-white/75">
-                Geen wirwar van tabs meer: approvals, inbox en pipeline in één
-                cockpit, mét zichtbare AI en jouw drempels.{" "}
-                <span className="text-white/60">
-                  {RECRUITMENT_DEMO_DISCLAIMER}
-                </span>
-              </p>
-            </div>
-          </motion.div>
-        </ScrollReveal>
-
         <ScrollReveal delay={0.14}>
           <div className="mx-auto mt-12 flex max-w-xl flex-col items-stretch gap-3 sm:mt-14 sm:flex-row sm:items-center sm:justify-center lg:mt-16">
             <div className="sm:inline-block">
@@ -779,18 +762,7 @@ function FinalCTA() {
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </MagneticButton>
             </div>
-            <motion.div whileTap={{ scale: 0.98 }} transition={{ duration: 0.15 }}>
-              <Link
-                href="/diensten"
-                className="group inline-flex min-h-[2.875rem] w-full items-center justify-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.05] px-9 py-3.5 text-[13px] font-semibold text-white/90 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm transition-colors hover:border-white/28 hover:bg-white/[0.09] sm:w-auto sm:text-sm"
-              >
-                Alle modules bekijken
-                <ArrowUpRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  aria-hidden
-                />
-              </Link>
-            </motion.div>
+
           </div>
         </ScrollReveal>
       </div>
