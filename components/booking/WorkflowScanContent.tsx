@@ -154,7 +154,7 @@ export function WorkflowScanContent({ calLink, contextVan }: Props) {
               </li>
               <li className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.14] bg-white/[0.045] px-4 py-2.5 text-sm text-white/[0.9] backdrop-blur-sm">
                 <CalendarClock className="h-[1.0625rem] w-[1.0625rem] text-[#aed4c5]" aria-hidden strokeWidth={1.75} />
-                Ma–vr · om het halfuur · 09:00–17:00
+                Ma t/m vr · om het halfuur · 09:00 tot 17:00
               </li>
             </motion.ul>
 
@@ -301,7 +301,7 @@ function FallbackBookingCard({
       </p>
       <p className="mx-auto mt-3 max-w-md text-[0.9375rem] leading-relaxed text-[#5c7368]">
         Er is nog geen online agenda gekoppeld. We plannen graag een gesprek van 30&nbsp;minuten;
-        ma–vr tussen 09:00 en 17:00, met slots om het halfuur.
+        ma t/m vr tussen 09:00 en 17:00, met slots om het halfuur.
       </p>
       <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
         <Link

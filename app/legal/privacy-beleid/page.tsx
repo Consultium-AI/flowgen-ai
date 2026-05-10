@@ -78,23 +78,26 @@ export default function PrivacyPage() {
           <p>Wij verwerken persoonsgegevens op basis van:</p>
           <ul className="mt-3 list-disc space-y-1.5 pl-5">
             <li>
-              <strong className="text-ink">Uitvoering van een overeenkomst</strong>{" "}
-              &mdash; wanneer verwerking noodzakelijk is om onze diensten te leveren.
+              <strong className="text-ink">Uitvoering van een overeenkomst</strong>
+              {": "}wanneer verwerking noodzakelijk is om onze diensten te leveren.
             </li>
             <li>
-              <strong className="text-ink">Gerechtvaardigd belang</strong> &mdash;{" "}
+              <strong className="text-ink">Gerechtvaardigd belang</strong>
+              {": "}
               voor het verbeteren van onze website en het beantwoorden van
               contactverzoeken.
             </li>
             <li>
-              <strong className="text-ink">Wettelijke verplichting</strong> &mdash;{" "}
+              <strong className="text-ink">Wettelijke verplichting</strong>
+              {": "}
               voor het bewaren van administratieve gegevens conform de
               belastingwetgeving.
             </li>
             <li>
-              <strong className="text-ink">Toestemming</strong> &mdash; wanneer je
-              expliciet toestemming geeft, bijvoorbeeld voor het ontvangen van
-              projectupdates.
+              <strong className="text-ink">Toestemming</strong>
+              {": "}
+              wanneer je expliciet toestemming geeft, bijvoorbeeld voor het ontvangen
+              van projectupdates.
             </li>
           </ul>
         </section>
@@ -226,29 +229,34 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-3 list-disc space-y-1.5 pl-5">
             <li>
-              <strong className="text-ink">Recht op inzage</strong> &mdash; je
-              mag opvragen welke gegevens wij van je bewaren.
+              <strong className="text-ink">Recht op inzage</strong>
+              {": "}
+              je mag opvragen welke gegevens wij van je bewaren.
             </li>
             <li>
-              <strong className="text-ink">Recht op rectificatie</strong> &mdash;{" "}
+              <strong className="text-ink">Recht op rectificatie</strong>
+              {": "}
               je kunt onjuiste gegevens laten corrigeren.
             </li>
             <li>
-              <strong className="text-ink">Recht op verwijdering</strong> &mdash;{" "}
+              <strong className="text-ink">Recht op verwijdering</strong>
+              {": "}
               je kunt ons verzoeken jouw gegevens te wissen.
             </li>
             <li>
-              <strong className="text-ink">Recht op beperking</strong> &mdash; je
-              kunt vragen de verwerking tijdelijk te beperken.
+              <strong className="text-ink">Recht op beperking</strong>
+              {": "}
+              je kunt vragen de verwerking tijdelijk te beperken.
             </li>
             <li>
-              <strong className="text-ink">Recht op overdraagbaarheid</strong>{" "}
-              &mdash; je kunt vragen om een kopie van je gegevens in een gangbaar
-              formaat.
+              <strong className="text-ink">Recht op overdraagbaarheid</strong>
+              {": "}
+              je kunt vragen om een kopie van je gegevens in een gangbaar formaat.
             </li>
             <li>
-              <strong className="text-ink">Recht van bezwaar</strong> &mdash; je
-              kunt bezwaar maken tegen verwerking op basis van gerechtvaardigd
+              <strong className="text-ink">Recht van bezwaar</strong>
+              {": "}
+              je kunt bezwaar maken tegen verwerking op basis van gerechtvaardigd
               belang.
             </li>
           </ul>

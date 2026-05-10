@@ -406,7 +406,7 @@ function KandidatenSection() {
       lead="Importeer, laat matchen en samenvatten, voordat je een CV opent."
       chips={[
         { icon: Filter, label: "Bronnen en filters" },
-        { icon: Brain, label: "Match 0–100%" },
+        { icon: Brain, label: "Match 0 tot 100%" },
         { icon: Sparkles, label: "AI-samenvatting" },
       ]}
       screenshots={[

@@ -471,6 +471,8 @@ export const CASE_STUDY = {
 export const FEATURED_TESTIMONIAL = {
   eyebrow: "Testimonials",
   title: "Interne use case met Consultium AI",
+  subtitle:
+    "Een kijkje achter de schermen: van versnipperde intake naar één overzicht, met AI-hulp en goedkeuringen vóór verzending.",
   quote:
     "Vroeger zaten dossiers verspreid over mailthreads, exports van formulieren en losse notities. Ik open nu eerst Overview om te zien welke dossiers aandacht willen en waar opvolging blijft hangen. Per Lead staat een duidelijke AI-samenvatting. In Approvals nakijken we berichten en vrijgaven voordat ze de deur uit gaan. Minder kopieerwerk tussen tools tijdens intake geeft ruimte om inhoudelijke keuzes te maken.",
   name: "Hamza el Gourari",

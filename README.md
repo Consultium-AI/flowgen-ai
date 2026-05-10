@@ -121,7 +121,7 @@ Zonder login: zet `VERCEL_TOKEN` (Account → Tokens) en gebruik `vercel deploy 
 
 **Automatisch deployen via GitHub Actions** (optioneel, handmatig)
 
-Alleen als je **geen** Vercel–Git-koppeling wilt gebruiken: voeg secrets toe en start **Actions** → **Vercel Production Deploy (manual)** → **Run workflow**. Normaal deployt **elke push naar `main`** via Vercel zelf (Settings → Git).
+Alleen als je **geen** Vercel-Git-koppeling wilt gebruiken: voeg secrets toe en start **Actions** → **Vercel Production Deploy (manual)** → **Run workflow**. Normaal deployt **elke push naar `main`** via Vercel zelf (Settings → Git).
 
 Secrets (alleen voor deze workflow): `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`.
 
