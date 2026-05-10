@@ -218,22 +218,22 @@ function DemoHero() {
 
             <motion.h1
               variants={heroItem}
-              className="font-display display-tight text-display-xl font-medium text-balance text-ink w-full min-w-0 max-w-4xl px-1 sm:px-2 mt-7 max-md:hyphens-auto"
+              className="font-display display-tight text-display-xl font-medium text-ink text-balance w-full min-w-0 max-w-4xl px-1 text-center sm:px-2 max-md:hyphens-auto mt-7"
             >
               <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
                 Het operationele dashboard
               </span>
               <span className="block max-md:[overflow-wrap:anywhere] md:whitespace-nowrap">
                 voor{" "}
-                <span className="text-gradient-accent-hero-home italic">
-                  recruitmentbureaus
-                </span>
               </span>
+              <span className="text-gradient-accent-hero-home italic">
+                  recruitmentbureaus  ‎ 
+                </span>
             </motion.h1>
 
             <motion.p
               variants={heroItem}
-              className="hero-lead mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-muted"
+              className="hero-lead mx-auto mt-7 w-full max-w-xl text-center text-base leading-relaxed text-muted sm:text-lg"
             >
               Inbox, screening, goedkeuringen en pipeline op één plek, zonder
               constant te wisselen van tool.
