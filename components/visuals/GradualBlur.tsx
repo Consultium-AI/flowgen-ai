@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * GradualBlur — React Bits–style layered backdrop blur.
+ * GradualBlur: React Bits layered backdrop blur.
  */
 import React, {
   memo,

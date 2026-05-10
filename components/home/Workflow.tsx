@@ -147,7 +147,7 @@ export function Workflow() {
         </div>
 
         <div className="mt-14 flex flex-col gap-10 lg:mt-20 lg:flex-row lg:gap-14 lg:items-stretch">
-          {/* Timeline — desktop + tablet */}
+          {/* Timeline (desktop + tablet) */}
           <ScrollReveal delay={0.08} className="hidden sm:block lg:max-w-[20rem] lg:shrink-0">
             <nav aria-label="Stappen naar je dashboard">
               <div className="relative pl-1">

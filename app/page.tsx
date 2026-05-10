@@ -16,6 +16,11 @@ const Workflow = dynamic(() =>
 const Services = dynamic(() =>
   import("@/components/home/Services").then((mod) => mod.Services),
 );
+const FeaturedTestimonial = dynamic(() =>
+  import("@/components/home/FeaturedTestimonial").then(
+    (mod) => mod.FeaturedTestimonial,
+  ),
+);
 const FAQ = dynamic(() => import("@/components/home/FAQ").then((mod) => mod.FAQ));
 const BottomCTA = dynamic(() =>
   import("@/components/home/BottomCTA").then((mod) => mod.BottomCTA),
@@ -36,9 +41,11 @@ export default function HomePage() {
       <Workflow />
       {/* 6. Pricing */}
       <Services />
-      {/* 7. FAQ */}
+      {/* 7. Testimonial */}
+      <FeaturedTestimonial />
+      {/* 8. FAQ */}
       <FAQ />
-      {/* 8. Bottom CTA */}
+      {/* 9. Bottom CTA */}
       <BottomCTA />
     </>
   );

@@ -102,7 +102,7 @@ export function ROICalculator() {
                     Instellingen
                   </p>
                   <p className="mt-2 text-[15px] leading-relaxed text-white/72">
-                    Schuif naar de situatie van je team — het totaal wordt direct
+                    Schuif naar de situatie van je team. Het totaal wordt direct
                     herberekend.
                   </p>
                 </div>

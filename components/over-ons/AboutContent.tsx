@@ -160,7 +160,7 @@ export function AboutContent() {
 }
 
 function MissionSection() {
-  /** Eén corps — zelfde schaal voor alle regels; alleen eerste alinea iets nadrukkelijker gewicht & vol wit. */
+  /** Eén corps: zelfde schaal voor alle regels; alleen eerste alinea iets nadrukkelijker gewicht & vol wit. */
   const missionParagraph =
     "font-display tracking-[-0.02em] text-[clamp(1.28rem,2.95vw,1.95rem)] leading-[1.76] antialiased";
 

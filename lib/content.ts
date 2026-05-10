@@ -332,7 +332,7 @@ export const BOTTOM_CTA = {
     rightTitle: "Met een workflow-scan",
     leftItems: [
       "Processen blijven onzichtbaar tussen mailbox, sheets en tools",
-      "Onduidelijk waar automatisering wél zinvol is — en waar niet",
+      "Onduidelijk waar automatisering w\u00e9l zinvol is, en waar niet",
       "Pilots starten vaak te groot, te technisch of zonder draagvlak",
     ],
     rightItems: [
@@ -350,7 +350,7 @@ export const DIENSTEN_PAGE = {
   eyebrow: "Oplossingen",
   title: "AI Operations Dashboards op maat.",
   subtitle:
-    "Leads, follow-ups en goedkeuringen behoud je overzicht \u2014 niet verspreid over mailboxen en tabbladen. Kies het pakket dat bij je fase past: van eerste pilot tot operaties op schaal.",
+    "Leads, follow-ups en goedkeuringen houd je in \u00e9\u00e9n blik bij elkaar, niet verspreid over mailboxen en tabbladen. Kies het pakket dat bij je fase past: van eerste pilot tot operaties op schaal.",
   primaryCta: {
     label: "Plan een gratis workflow-scan",
     href: "/workflow-scan",
@@ -358,7 +358,7 @@ export const DIENSTEN_PAGE = {
   secondaryCta: { label: "Bekijk productdemo", href: "/demo-recruitment" },
 };
 
-/** Homepage Comparison — controle / veiligheid (zie `components/home/Comparison.tsx`). */
+/** Homepage Comparison: controle / veiligheid (zie `components/home/Comparison.tsx`). */
 export const SECURITY = {
   eyebrow: "Vertrouwen",
   title: "Controle waar het telt",
@@ -466,6 +466,21 @@ export const CASE_STUDY = {
     "Interesse in een echte walkthrough met jouw sector? Dat doen we in de workflow-scan.",
   subtitle: "UI is merk-neutraal op te zetten; dit is puur voorbeeld.",
 };
+
+/** Homepage testimonial spotlight (`FeaturedTestimonial`). */
+export const FEATURED_TESTIMONIAL = {
+  eyebrow: "Testimonials",
+  title: "Interne use case met Consultium AI",
+  quote:
+    "Vroeger zaten dossiers verspreid over mailthreads, exports van formulieren en losse notities. Ik open nu eerst Overview om te zien welke dossiers aandacht willen en waar opvolging blijft hangen. Per Lead staat een duidelijke AI-samenvatting. In Approvals nakijken we berichten en vrijgaven voordat ze de deur uit gaan. Minder kopieerwerk tussen tools tijdens intake geeft ruimte om inhoudelijke keuzes te maken.",
+  name: "Hamza el Gourari",
+  company: "Consultium AI",
+  metricValue: "15+",
+  metricUnit: "uur bespaard",
+  metricDetail: "per week op intake \u0026 opvolging",
+  imageSrc: "/testimonials/hamza-el-gourari.jpeg",
+  imageAlt: "Hamza el Gourari, Consultium AI",
+} as const;
 
 // Legacy exports for pages that still reference old names
 export const FEATURES = PROBLEMS;

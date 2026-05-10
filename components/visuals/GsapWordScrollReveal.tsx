@@ -9,7 +9,7 @@ import "./GsapWordScrollReveal.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export type GsapWordScrollRevealProps = {
-  /** Plain text — wordt per woord gesplitst voor de animatie. */
+  /** Plain text: wordt per woord gesplitst voor de animatie. */
   children: string;
   scrollContainerRef?: React.RefObject<HTMLElement | null>;
   enableBlur?: boolean;
@@ -23,7 +23,7 @@ export type GsapWordScrollRevealProps = {
 };
 
 /**
- * Word-by-word scroll reveal met GSAP ScrollTrigger (React Bits–stijl).
+ * Word-by-word scroll reveal met GSAP ScrollTrigger (React Bits-stijl).
  * Alleen strings als children; voor meerdere alinea’s meerdere instanties.
  */
 export function GsapWordScrollReveal({

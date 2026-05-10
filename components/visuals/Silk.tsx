@@ -139,7 +139,7 @@ function createUniforms(
   };
 }
 
-/** React Bits Silk — fullscreen plane scaled to R3F viewport. */
+/** React Bits Silk: fullscreen plane scaled to R3F viewport. */
 export default function Silk({
   speed = 5,
   scale = 1,

@@ -43,7 +43,7 @@ export function BottomCTA() {
               "linear-gradient(180deg, #020504 0%, #050a08 38%, #030705 100%)",
           }}
         />
-        {/* Center spotlight — cool mist + subtle warm floor */}
+        {/* Center spotlight: cool mist + subtle warm floor */}
         <div
           className="absolute inset-0"
           style={{
@@ -93,7 +93,7 @@ export function BottomCTA() {
           >
             <div className="overflow-hidden rounded-[1.25rem] border border-white/[0.09] bg-[#050908]/80 shadow-[0_40px_120px_-60px_rgba(0,0,0,0.85)] backdrop-blur-sm sm:rounded-2xl">
               <div className="grid md:grid-cols-2">
-                {/* Left — lower contrast */}
+                {/* Left: lower contrast */}
                 <div className="border-b border-white/[0.08] bg-[rgba(6,12,10,0.92)] md:border-b-0 md:border-r md:border-white/[0.08]">
                   <div className="border-b border-white/[0.08] px-6 py-5 text-center sm:px-8 sm:py-6">
                     <p className="text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-white">
@@ -123,7 +123,7 @@ export function BottomCTA() {
                   </ul>
                 </div>
 
-                {/* Right — highlighted */}
+                {/* Right: highlighted */}
                 <div
                   className="relative bg-gradient-to-br from-[rgba(53,111,79,0.38)] via-[rgba(30,52,44,0.55)] to-[rgba(10,18,15,0.72)]"
                   style={{
