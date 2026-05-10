@@ -151,10 +151,6 @@ export function Workflow() {
           <ScrollReveal delay={0.08} className="hidden sm:block lg:max-w-[20rem] lg:shrink-0">
             <nav aria-label="Stappen naar je dashboard">
               <div className="relative pl-1">
-                <div
-                  aria-hidden
-                  className="absolute left-[21px] top-4 bottom-4 w-px bg-gradient-to-b from-white/25 via-white/10 to-transparent"
-                />
                 <ol className="relative space-y-0">
                 {HOW_IT_WORKS.steps.map((s, i) => {
                   const StepIcon = STEP_ICONS[i] ?? Search;
