@@ -1,0 +1,12 @@
+import type { Metadata } from "next";
+import { AboutContent } from "@/components/over-ons/AboutContent";
+
+export const metadata: Metadata = {
+  title: "Over ons",
+  description:
+    "Qozen AI maakt AI Operations Dashboards waar je team zichtbaar aan werkt: geen verborgen automations alleen. Lees onze aanpak en plan een vrijblijvende workflow-scan.",
+};
+
+export default function AboutPage() {
+  return <AboutContent />;
+}
