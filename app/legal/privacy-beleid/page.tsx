@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Privacy beleid",
@@ -10,7 +11,7 @@ export default function PrivacyPage() {
   return (
     <article className="container-narrow pb-24 pt-36 sm:pt-44">
       <h1 className="heading-display">Privacyverklaring</h1>
-      <p className="mt-4 text-sm text-muted">Laatst bijgewerkt: 5 mei 2025</p>
+      <p className="mt-4 text-sm text-muted">Laatst bijgewerkt: 10 mei 2026</p>
 
       <div className="mt-10 max-w-2xl space-y-10 text-base leading-relaxed text-muted">
         {/* 1 */}
@@ -21,12 +22,25 @@ export default function PrivacyPage() {
           <p>
             Qozen AI is gevestigd aan de Westerstraat 10, 3016&nbsp;DH Rotterdam
             en ingeschreven bij de Kamer van Koophandel onder nummer{" "}
-            <strong className="text-ink">96716606</strong>. Voor vragen over deze
-            privacyverklaring kun je contact opnemen via{" "}
-            <a className="text-accent underline" href="mailto:info@qozenai.nl">
-              info@qozenai.nl
+            <strong className="text-ink">{SITE.kvk}</strong>. BTW-identificatienummer:{" "}
+            <strong className="text-ink">{SITE.btw}</strong>. Voor vragen over deze
+            privacyverklaring of een verzoek op grond van de AVG kun je contact
+            opnemen via{" "}
+            <a className="text-accent underline" href={`mailto:${SITE.email}`}>
+              {SITE.email}
+            </a>{" "}
+            of telefonisch via{" "}
+            <a className="text-accent underline" href={SITE.phoneHref}>
+              {SITE.phone}
             </a>
             .
+          </p>
+          <p className="mt-3">
+            Wij verkopen geen persoonsgegevens en gebruiken ze niet voor
+            profilering ten behoeve van derden. Voor maatwerk- en
+            pilottrajecten kunnen aanvullende afspraken in een offerte of
+            verwerkersovereenkomst staan; die hebben voorrang op deze
+            privacyverklaring voor zover het die trajecten betreft.
           </p>
         </section>
 
@@ -262,19 +276,69 @@ export default function PrivacyPage() {
           </ul>
           <p className="mt-3">
             Je kunt een verzoek indienen via{" "}
-            <a className="text-accent underline" href="mailto:info@qozenai.nl">
-              info@qozenai.nl
+            <a className="text-accent underline" href={`mailto:${SITE.email}`}>
+              {SITE.email}
             </a>
             . Wij reageren binnen vier weken op je verzoek. Je hebt ook altijd
-            het recht om een klacht in te dienen bij de Autoriteit
-            Persoonsgegevens.
+            het recht om een klacht in te dienen bij de{" "}
+            <a
+              className="text-accent underline"
+              href="https://autoriteitpersoonsgegevens.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Autoriteit Persoonsgegevens
+            </a>
+            .
           </p>
         </section>
 
         {/* 11 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            11. Wijzigingen
+            11. Subverwerkers en internationale doorgifte
+          </h2>
+          <p>
+            Wij maken gebruik van technische dienstverleners voor o.a. hosting
+            van de website en applicaties, transactionele e-mail, logging,
+            planning van gesprekken en &mdash; waar relevant &mdash; het aanroepen
+            van AI-modellen via gecontracteerde aanbieders. Met deze partijen
+            worden passende afspraken gemaakt (zoals een verwerkersovereenkomst)
+            en worden alleen de gegevens gedeeld die nodig zijn voor de dienst.
+          </p>
+          <p className="mt-3">
+            Een actuele lijst van categorieën subverwerkers kun je bij ons
+            opvragen via {SITE.email}. Gegevens kunnen in uitzonderlijke gevallen
+            buiten de Europese Economische Ruimte worden verwerkt; dat gebeurt
+            dan alleen met passende waarborgen (bijvoorbeeld EU-modelclausules of
+            adequaatheidsbesluiten), tenzij een specifieke uitzondering uit de AVG
+            van toepassing is.
+          </p>
+        </section>
+
+        {/* 12 */}
+        <section>
+          <h2 className="mb-3 text-lg font-semibold text-ink">
+            12. Geautomatiseerde besluitvorming en kinderen
+          </h2>
+          <p>
+            Voor bezoekers van deze website en gebruikers van ons standaard
+            contact-/planningsproces zetten wij geen puur geautomatiseerde
+            besluitvorming in die in de zin van de AVG juridische gevolgen voor
+            jou heeft of jou op vergelijkbare wijze significant treft. Voor
+            maatwerk-dashboards leggen het offerte-document en eventuele
+            verwerkersovereenkomst uit waar menselijke tussenkomst is voorzien.
+          </p>
+          <p className="mt-3">
+            Onze diensten en website zijn niet bedoeld voor personen jonger dan
+            16 jaar. Bewust verzamelen wij geen gegevens van kinderen.
+          </p>
+        </section>
+
+        {/* 13 */}
+        <section>
+          <h2 className="mb-3 text-lg font-semibold text-ink">
+            13. Wijzigingen
           </h2>
           <p>
             Qozen AI behoudt zich het recht voor deze privacyverklaring te
@@ -295,17 +359,18 @@ export default function PrivacyPage() {
             </li>
             <li>Westerstraat 10</li>
             <li>3016 DH Rotterdam</li>
-            <li>KVK: 96716606</li>
+            <li>KVK: {SITE.kvk}</li>
+            <li>BTW: {SITE.btw}</li>
             <li>
               E-mail:{" "}
-              <a className="text-accent underline" href="mailto:info@qozenai.nl">
-                info@qozenai.nl
+              <a className="text-accent underline" href={`mailto:${SITE.email}`}>
+                {SITE.email}
               </a>
             </li>
             <li>
               Telefoon:{" "}
-              <a className="text-accent underline" href="tel:+31103603123">
-                010 360 3123
+              <a className="text-accent underline" href={SITE.phoneHref}>
+                {SITE.phone}
               </a>
             </li>
           </ul>

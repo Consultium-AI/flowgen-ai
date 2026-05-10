@@ -111,7 +111,7 @@ export function FeaturedTestimonial() {
                       strokeWidth={1.75}
                       aria-hidden
                     />
-                    Klantstem
+                    Interne use-case quote
                   </span>
                 </div>
 

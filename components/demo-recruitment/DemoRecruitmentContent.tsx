@@ -31,7 +31,7 @@ import {
 } from "lucide-react";
 import GradualBlur from "@/components/visuals/GradualBlur";
 import LineWaves from "@/components/visuals/LineWaves";
-import { HERO } from "@/lib/content";
+import { HERO, RECRUITMENT_DEMO_DISCLAIMER } from "@/lib/content";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBackground } from "@/components/ui/SectionBackground";
@@ -237,6 +237,15 @@ function DemoHero() {
             >
               Inbox, screening, goedkeuringen en pipeline op één plek, zonder
               constant te wisselen van tool.
+            </motion.p>
+            <motion.p
+              variants={heroItem}
+              role="note"
+              className="mx-auto mt-6 max-w-xl rounded-2xl border border-white/[0.14] bg-white/[0.06] px-5 py-4 text-center text-[0.8125rem] leading-relaxed text-white/[0.78] ring-1 ring-black/[0.2] backdrop-blur-sm sm:text-sm"
+            >
+              {RECRUITMENT_DEMO_DISCLAIMER} Schermen en koppelingen in deze
+              demo illustreren de richting; echte integraties plannen we per
+              pilot.
             </motion.p>
           </div>
 
@@ -502,7 +511,7 @@ function AgendaSection() {
       icon={Calendar}
       eyebrow="Module 05 · Agenda"
       title="Weekoverzicht voor intakes en klantmomenten"
-      lead="Alle afspraken en voorstellen op één tijdlijn, koppelbaar aan je stack."
+      lead="In de demo zie je planning en voorstellen op één tijdlijn; pilots starten zonder zware kalender- of stackkoppeling, tenzij we die expliciet in scope nemen."
       chips={[
         { icon: Calendar, label: "Week en dag" },
         { icon: Sparkles, label: "AI-slotvoorstellen" },
@@ -749,7 +758,10 @@ function FinalCTA() {
             <div className="overflow-hidden rounded-[1.25rem] border border-white/[0.09] bg-[#050908]/75 p-10 text-center shadow-[0_40px_120px_-60px_rgba(0,0,0,0.85)] backdrop-blur-sm sm:rounded-2xl sm:p-12">
               <p className="text-[0.9375rem] leading-relaxed text-white/75">
                 Geen wirwar van tabs meer: approvals, inbox en pipeline in één
-                cockpit, mét zichtbare AI en jouw drempels.
+                cockpit, mét zichtbare AI en jouw drempels.{" "}
+                <span className="text-white/60">
+                  {RECRUITMENT_DEMO_DISCLAIMER}
+                </span>
               </p>
             </div>
           </motion.div>

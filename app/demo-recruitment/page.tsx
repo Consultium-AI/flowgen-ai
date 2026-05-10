@@ -4,7 +4,7 @@ import { DemoRecruitmentContent } from "@/components/demo-recruitment/DemoRecrui
 export const metadata: Metadata = {
   title: "Demo · AI Recruitment Ops Dashboard",
   description:
-    "Bekijk hoe Qozen AI een operationele dashboard werkt voor recruitmentbureaus. Centrale kandidaten-inbox, AI-screening, goedgekeurde communicatie, pipeline en planning op één plek.",
+    "Productdemo (visie): zo kan een recruitment cockpit werken. Pilot start met CSV/Sheet/formulier of handmatige import; zware integraties plannen we per scope.",
 };
 
 export default function DemoRecruitmentPage() {

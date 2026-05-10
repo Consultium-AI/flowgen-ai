@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Algemene voorwaarden",
@@ -10,7 +11,7 @@ export default function TermsPage() {
   return (
     <article className="container-narrow pb-24 pt-36 sm:pt-44">
       <h1 className="heading-display">Algemene voorwaarden</h1>
-      <p className="mt-4 text-sm text-muted">Laatst bijgewerkt: 5 mei 2025</p>
+      <p className="mt-4 text-sm text-muted">Laatst bijgewerkt: 10 mei 2026</p>
 
       <div className="mt-10 max-w-2xl space-y-10 text-base leading-relaxed text-muted">
         {/* 1 */}
@@ -22,7 +23,7 @@ export default function TermsPage() {
             <li>
               <strong className="text-ink">Qozen AI</strong>: de eenmanszaak
               Qozen AI, gevestigd te Rotterdam, ingeschreven bij de KvK onder
-              nummer 96716606.
+              nummer {SITE.kvk}, BTW-identificatienummer {SITE.btw}.
             </li>
             <li>
               <strong className="text-ink">Opdrachtgever</strong>: de
@@ -46,7 +47,24 @@ export default function TermsPage() {
         {/* 2 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            2. Toepasselijkheid
+            2. Demo&rsquo;s, website en contractuele scope
+          </h2>
+          <p>
+            Productdemo&rsquo;s, voorbeeldschermen en teksten op de website
+            (waaronder de recruitment-productdemo) illustreren een
+            productrichting. Wat Qozen AI contractueel levert, staat in de
+            offerte, bevestiging van opdracht en verdere schriftelijke afspraken.
+            Standaard omvat een pilot geen volledige automatische koppeling met
+            externe platforms (zoals ATS, professionele netwerksites,
+            agenda-tools of klantomgevingen), tenzij dat uitdrukkelijk als
+            onderdeel van de scope is beschreven en gefactureerd.
+          </p>
+        </section>
+
+        {/* 3 */}
+        <section>
+          <h2 className="mb-3 text-lg font-semibold text-ink">
+            3. Toepasselijkheid
           </h2>
           <p>
             Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen,
@@ -61,10 +79,10 @@ export default function TermsPage() {
           </p>
         </section>
 
-        {/* 3 */}
+        {/* 4 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            3. Offertes en overeenkomsten
+            4. Offertes en overeenkomsten
           </h2>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
@@ -83,10 +101,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 4 */}
+        {/* 5 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            4. Uitvoering van diensten
+            5. Uitvoering van diensten
           </h2>
           <p>
             Qozen AI voert alle diensten uit naar beste inzicht en vermogen. Het
@@ -111,10 +129,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 5 */}
+        {/* 6 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            5. Verantwoord gebruik van AI
+            6. Verantwoord gebruik van AI
           </h2>
           <p>
             De door Qozen AI geleverde dashboards en AI-workflows mogen niet
@@ -144,10 +162,10 @@ export default function TermsPage() {
           </p>
         </section>
 
-        {/* 6 */}
+        {/* 7 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            6. Meerwerk
+            7. Meerwerk
           </h2>
           <p>
             Werkzaamheden die buiten de overeengekomen scope vallen, gelden als
@@ -163,10 +181,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 7 */}
+        {/* 8 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            7. Prijzen en betaling
+            8. Prijzen en betaling
           </h2>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>Alle genoemde prijzen zijn exclusief btw, tenzij anders vermeld.</li>
@@ -189,10 +207,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 8 */}
+        {/* 9 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            8. Intellectueel eigendom
+            9. Intellectueel eigendom
           </h2>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
@@ -216,10 +234,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 9 */}
+        {/* 10 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            9. Gegevensverwerking en AVG
+            10. Gegevensverwerking en AVG
           </h2>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
@@ -246,10 +264,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 10 */}
+        {/* 11 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            10. Aansprakelijkheid
+            11. Aansprakelijkheid
           </h2>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
@@ -275,10 +293,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 11 */}
+        {/* 12 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            11. Onderhoud en support
+            12. Onderhoud en support
           </h2>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
@@ -291,15 +309,15 @@ export default function TermsPage() {
             </li>
             <li>
               Grotere aanpassingen of nieuwe functionaliteiten vallen onder
-              meerwerk (zie artikel 6).
+              meerwerk (zie artikel 7).
             </li>
           </ul>
         </section>
 
-        {/* 12 */}
+        {/* 13 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            12. Looptijd en opzegging
+            13. Looptijd en opzegging
           </h2>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
@@ -321,10 +339,10 @@ export default function TermsPage() {
           </ul>
         </section>
 
-        {/* 13 */}
+        {/* 14 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            13. Overmacht
+            14. Overmacht
           </h2>
           <p>
             Qozen AI is niet gehouden tot nakoming van enige verplichting indien
@@ -336,10 +354,10 @@ export default function TermsPage() {
           </p>
         </section>
 
-        {/* 14 */}
+        {/* 15 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            14. Toepasselijk recht en geschillen
+            15. Toepasselijk recht en geschillen
           </h2>
           <p>
             Op alle overeenkomsten tussen Qozen AI en de opdrachtgever is
@@ -349,10 +367,10 @@ export default function TermsPage() {
           </p>
         </section>
 
-        {/* 15 */}
+        {/* 16 */}
         <section>
           <h2 className="mb-3 text-lg font-semibold text-ink">
-            15. Wijzigingen
+            16. Wijzigingen
           </h2>
           <p>
             Qozen AI behoudt zich het recht voor deze algemene voorwaarden te
@@ -373,18 +391,18 @@ export default function TermsPage() {
             </li>
             <li>Westerstraat 10</li>
             <li>3016 DH Rotterdam</li>
-            <li>KVK: 96716606</li>
-            <li>BTW: NL005227750B76</li>
+            <li>KVK: {SITE.kvk}</li>
+            <li>BTW: {SITE.btw}</li>
             <li>
               E-mail:{" "}
-              <a className="text-accent underline" href="mailto:info@qozenai.nl">
-                info@qozenai.nl
+              <a className="text-accent underline" href={`mailto:${SITE.email}`}>
+                {SITE.email}
               </a>
             </li>
             <li>
               Telefoon:{" "}
-              <a className="text-accent underline" href="tel:+31103603123">
-                010 360 3123
+              <a className="text-accent underline" href={SITE.phoneHref}>
+                {SITE.phone}
               </a>
             </li>
           </ul>

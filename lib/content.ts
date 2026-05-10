@@ -39,6 +39,10 @@ export const FOOTER_LINKS = {
   ],
 };
 
+/** Toon op /demo-recruitment: voorkomt verwarring over live integraties vs. productvisie. */
+export const RECRUITMENT_DEMO_DISCLAIMER =
+  "Demo toont productvisie; pilot start met CSV/Sheet/formulier of handmatige import.";
+
 export const HERO = {
   title: "AI-automatiseringen met \u00e9\u00e9n dashboard voor je hele workflow",
   subtitle:
@@ -211,7 +215,7 @@ export const PRICING = {
   eyebrow: "Pricing",
   title: "Transparante prijzen, duidelijke scope",
   note:
-    "Demo\u2019s tonen de volledige visie; je start altijd met \u00e9\u00e9n workflow en lichte import. Integraties zoals CRM, ATS, mail of social bespreken we apart onder Custom Operations.",
+    "Demo\u2019s (zoals de recruitment-demo) tonen de volledige visie; je start altijd met \u00e9\u00e9n workflow en lichte import. Integraties zoals CRM, ATS, mail of social bespreken we apart onder Custom Operations.",
   items: [
     {
       name: "Founding Pilot",
@@ -270,9 +274,9 @@ export const PRICING = {
       features: [
         "Meerdere workflows",
         "Custom dashboard",
-        "CRM/ATS-koppeling",
-        "LinkedIn/Indeed/Gmail/Outlook-integraties",
-        "Slack/Teams notificaties",
+        "CRM/ATS-koppeling (na intake & offerte)",
+        "Professionele bronnen/mail/ATS-koppelingen (op maat, na scope)",
+        "Slack/Teams notificaties (waar passend)",
         "Workflow monitoring",
         "Failed automation alerts",
         "Audit/activity logs",
