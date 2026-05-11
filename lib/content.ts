@@ -88,7 +88,7 @@ export const SOLUTION = {
   eyebrow: "De oplossing",
   title: "E\u00e9n dashboard voor je AI-workflows",
   description:
-    "Qozen AI bouwt automatiseringen rondom jouw proces en maakt ze zichtbaar in een gebruiksvriendelijk dashboard. Je team ziet precies welke leads binnenkomen, welke AI-concepten klaarstaan, welke follow-ups aandacht nodig hebben en welke acties gepland zijn.",
+    "Qozen AI automatiseert je proces en bundelt leads, AI-concepten en opvolging in \u00e9\u00e9n overzichtelijk dashboard.",
   features: [
     {
       title: "Lead tracking",
@@ -211,31 +211,74 @@ export const HOW_IT_WORKS = {
   ],
 };
 
+export const PILOT_SECTION = {
+  eyebrow: "Founding Pilot",
+  title: "Start met één AI-workflow die meetbaar tijd bespaart",
+  subtitle:
+    "We bouwen één workflow voor één repetitief proces. Vooraf meten we hoeveel tijd het nu kost. Haal je binnen 90 dagen geen 10 uur per week tijdwinst? Dan krijg je je pilotkosten terug.",
+  lead: "",
+  context: "",
+  forWho:
+    "Voor teams met veel handmatige intake, opvolging of copy-paste tussen tools.",
+  price: "\u20ac599",
+  cadence: "/ maand",
+  periodLine: "3 maanden \u00b7 \u20ac0 setup",
+  includedListEyebrow: "Inbegrepen bij de pilot",
+  includedItems: [
+    "Scope en meetmoment direct na de workflow-scan",
+    "1 gekozen workflow en 1 dashboard",
+    "Lichte import via CSV, Google Sheet, formulier of bestaande export",
+    "Eerste live omgeving binnen 30 dagen",
+    "AI-samenvatting, scoring, classificatie of approval-flow",
+    "2 optimalisatierondes per maand",
+    "Baseline-meting vooraf en resultaatmeting na 90 dagen",
+  ],
+  highlights: [
+    "10 uur per week bespaard op het gekozen proces binnen 90 dagen, of pilotkosten terug",
+    "Heldere baseline en meetmomenten vooraf en na afloop van de pilot",
+  ],
+  bullets: [
+    "E\u00e9n workflow en dashboard in scope na de workflow-scan",
+    "Lichte import, zonder zware CRM-, ATS- of API-koppeling in deze pilot",
+    "Baseline en succesafspraken schriftelijk vastgelegd v\u00f3\u00f3r de meetperiode van 90 dagen",
+  ],
+  comparison: {
+    rightTitle: "Founding Pilot",
+  },
+  guaranteeTermsEyebrow: "Garantievoorwaarden",
+  guaranteeTerms:
+    "De garantie geldt alleen als het gekozen proces vooraf minimaal 15 uur per week aan routinematig handwerk kost, jullie de afgesproken input leveren en wekelijks feedback geven. Halen we na 90 dagen geen 10 uur per week tijdwinst op datzelfde proces volgens die vooraf vastgelegde meetafspraak, dan krijgen jullie de betaalde pilotkosten voor die pilottermijn terug. Zware CRM-, ATS- en API-koppelingen vallen buiten deze pilot.",
+  cta: { label: "Boek workflow-scan", href: "/workflow-scan?van=pilot" },
+  finePrint: "",
+} as const;
+
 export const PRICING = {
   eyebrow: "Pricing",
-  title: "Transparante prijzen, duidelijke scope",
+  title: "Pilot eerst met meetbare tijdswinst",
   note:
-    "Demo\u2019s (zoals de recruitment-demo) tonen de volledige visie; je start altijd met \u00e9\u00e9n workflow en lichte import. Integraties zoals CRM, ATS, mail of social bespreken we apart onder Custom Operations.",
+    "Demo\u2019s tonen de volledige visie. Pilot is \u00e9\u00e9n workflow met lichte import en een schriftelijke tijdsafspraak na scan. CRM ATS mail of social plannen we onder Custom Operations.",
   items: [
     {
       name: "Founding Pilot",
+      tagline: "10 uur per week bespaard, of pilotkosten terug",
       description:
-        "E\u00e9n workflow testen zonder zware integraties (leads, kandidaten, rapporten of klantmail).",
+        "\u00c9\u00e9n AI-workflow voor \u00e9\u00e9n repetitief proces. Vooraf leggen we vast hoeveel tijd het nu kost; binnen 90 dagen minimaal 10 uur per week besparen op dat proces of je pilotkosten terug. Eerste live omgeving binnen 30 dagen, lichte import, zonder zware integratieprojecten. Founding Pilot: \u20ac599/mnd, drie maanden, \u20ac0 setup.",
+      guaranteeBox:
+        "Alleen bij minimaal 15 uur per week routinematig handwerk op het gekozen proces, afgesproken input en wekelijks teamfeedback. Halen we na 90 dagen niet de vastgelegde 10 uur per week tijdwinst op dat proces, dan terugbetaling van de betaalde pilotkosten voor deze pilottermijn. Start via CSV, Google Sheet, formulier of export. Zware CRM-, ATS- en API-koppelingen vallen buiten deze garantie.",
       setup: "\u20ac0",
-      price: "\u20ac399",
+      price: "\u20ac599",
       cadence: "/ maand",
-      cta: { label: "Boek Workflow-scan", href: "/workflow-scan?van=pilot" },
+      priceMeta: "3 maanden pilottermijn",
+      cta: { label: "Boek workflow-scan", href: "/workflow-scan?van=pilot" },
       features: [
+        "Workflow-scan plus scopeafspraken",
         "1 dashboard",
-        "1 workflow (scope in workflow-scan)",
-        "CSV, Google Sheet, formulier of handmatige import",
-        "AI-samenvatting per item (lead, kandidaat, rapport)",
-        "Match- of prioriteitsscore",
-        "Pipeline- of statusoverzicht",
-        "AI-conceptmail / outreach-draft",
-        "Approval inbox",
-        "2 follow-upmomenten",
-        "Basic support",
+        "1 workflow in scope na scan",
+        "Lichte import (CSV, Sheet, formulier of export)",
+        "Live omgeving binnen 30 dagen",
+        "AI-samenvatting, scoring, classificatie of approval-flow",
+        "2 optimalisatierondes per maand",
+        "Baseline- en resultaatmeting",
       ],
     },
     {
@@ -308,7 +351,11 @@ export const FAQ = {
     },
     {
       q: "Hoe lang duurt het voordat we live zijn?",
-      a: "De meeste pilots zijn binnen 1 \u00e0 2 weken operationeel, zodra we alle benodigde input en toegang hebben ontvangen.",
+      a: "Doorgaans binnen 30 dagen na workflow-scan zodra input en toegang rond zijn. Daarna meten we tot dag 90 of we de afgesproken tijdsbesparing op het gekozen proces halen.",
+    },
+    {
+      q: "Hoe werkt de pilotgarantie?",
+      a: "We leggen vooraf schriftelijk vast welk proces meetelt, wat we automatiseren en hoe we tijd meten (baseline en succes na 90 dagen). De garantie geldt alleen bij minimaal 15 uur per week routinematig handwerk op dat proces, levering van de afgesproken input en wekelijkse teamfeedback. Halen we na 90 dagen niet de vastgelegde 10 uur per week tijdwinst op hetzelfde proces, dan krijgen jullie de betaalde pilotkosten voor die pilottermijn terug. Zware CRM-, ATS- en API-koppelingen vallen buiten deze pilot.",
     },
     {
       q: "Kunnen we later extra processen toevoegen?",
@@ -330,7 +377,7 @@ export const BOTTOM_CTA = {
   title:
     "Klaar om je eerste proces te automatiseren met volledig overzicht?",
   description:
-    "Boek een gratis workflow-scan en ontdek welk proces het snelst resultaat oplevert als AI-dashboard pilot.",
+    "Boek een gratis workflow-scan en zie welk proces het snelst tijd oplevert voor een pilot met meetbare afspraak.",
   comparison: {
     leftTitle: "Zonder gerichte intake",
     rightTitle: "Met een workflow-scan",
@@ -354,7 +401,7 @@ export const DIENSTEN_PAGE = {
   eyebrow: "Oplossingen",
   title: "AI Operations Dashboards op maat.",
   subtitle:
-    "Leads, follow-ups en goedkeuringen houd je in \u00e9\u00e9n blik bij elkaar, niet verspreid over mailboxen en tabbladen. Kies het pakket dat bij je fase past: van eerste pilot tot operaties op schaal.",
+    "Leads, follow-ups en goedkeuringen in \u00e9\u00e9n blik. Start met een pilot van drie maanden met schriftelijke tijdsafspraak.",
   primaryCta: {
     label: "Plan een gratis workflow-scan",
     href: "/workflow-scan",

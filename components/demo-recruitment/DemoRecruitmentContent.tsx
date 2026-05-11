@@ -739,7 +739,7 @@ function FinalCTA() {
                 aria-hidden
                 strokeWidth={1.75}
               />
-              Pilot · €399 p/m · €0 setup
+              Founding Pilot · €599 p/m · 3 maanden · €0 setup
             </p>
             <h2 className="font-display mt-6 text-[1.85rem] font-medium leading-[1.12] tracking-[-0.03em] text-[#f4f7f5] text-balance sm:text-[2.35rem] sm:leading-[1.08] lg:text-[2.65rem]">
               Klaar om jouw bureau te transformeren?

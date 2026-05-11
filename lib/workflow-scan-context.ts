@@ -12,7 +12,7 @@ const ALLOWED = new Set([
 
 const NOTES: Record<string, string> = {
   pilot:
-    "Je komt vanuit Founding Pilot: we bereiden dit gesprek daar specifiek op voor.",
+    "Je komt vanuit de Pilot: we bereiden dit gesprek daar specifiek op voor.",
   growth:
     "Je komt vanuit het Active Ops-pakket: we bereiden dit gesprek daar specifiek op voor.",
   "active-ops":
